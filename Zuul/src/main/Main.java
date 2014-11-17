@@ -4,6 +4,7 @@ public class Main {
 
     public static void main(String[] args) throws InterruptedException {
     	new Game();
+    	System.out.print("salut");
     }
 
 }
