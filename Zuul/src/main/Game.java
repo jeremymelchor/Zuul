@@ -44,10 +44,10 @@ public class Game {
         Room td1 = new Td(); // 3 salles de td
         Room c1 = new Corridor();
         
-        foyer.setExit("west",c1);
+        foyer.setExit("north",c1);
         
-        c1.setExit("north",lecture1);
-        c1.setExit("south", secretariat);
+        c1.setExit("south",foyer);
+        c1.setExit("north", secretariat);
         
         currentRoom = foyer;    
     }
