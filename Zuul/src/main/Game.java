@@ -1,12 +1,15 @@
 package main;
 
 import rooms.*;
+import player.*;
+import things.*;
 
 public class Game {
 	Room currentRoom;
+    public Player player;
 	
     public Game() throws InterruptedException {
-    	waiting();
+    	Player player = new Player();
     }
     
     /**
@@ -39,7 +42,7 @@ public class Game {
         Room lecture1 = new Lecture(); // 3 salles de classe
         Room library = new Library();
         Room lunchRoom = new LunchRoom();
-        Room Print = new Print();
+        Room print = new Print();
         Room secretariat = new Secretariat();
         Room td1 = new Td(); // 3 salles de td
         Room c1 = new Corridor();
@@ -51,4 +54,9 @@ public class Game {
         
         currentRoom = foyer;    
     }
+    
+    public Player getPlayer() {
+        return player;
+    }
+    
 }

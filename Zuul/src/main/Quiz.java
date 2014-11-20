@@ -123,7 +123,7 @@ public class Quiz {
      * Check the score and print the result.
      */
     void endOfGame() {
-        if (score >= numberOfQuestions/2) {
+        if (score > numberOfQuestions/2) {
             printCongratulations();
         } else {
             printGameOver();
