@@ -7,11 +7,13 @@ public class Coffee extends Thing {
 		super("coffe");
 	}
 
-	public void isUsed(Player pl) {
-		modifEnergy(pl);
+	/**
+	 * When you drink a coffee, it raises the energy level.
+	 */
+	@Override
+	public void use(Player player) {
+		player.raiseEnergy(10);
+		System.out.println("You just drank a coffe. Energy +10.");
 	}
 
-	public void modifEnergy(Player pl) {
-		pl.lvlEnergy--;
-	}
 }

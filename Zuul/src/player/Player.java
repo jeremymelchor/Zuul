@@ -79,7 +79,7 @@ public class Player {
 	/**
 	 * A method printing every possible lecture.
 	 */
-	void printAll() {
+	public void printAll() {
 		for (String el : completeList) {
 			System.out.println(el);
 		}
@@ -88,7 +88,8 @@ public class Player {
 	/**
 	 * A method printing which lecture the player learned so far.
 	 */
-	void printCurrentLecture() {
+	public void printCurrentLecture() {
+		System.out.println("Your lectures : ");
 		for (String el : listLecture) {
 			System.out.println(el);
 		}
@@ -97,7 +98,8 @@ public class Player {
 	/**
 	 * A method printing which lab the player learned so far.
 	 */
-	void printCurrentLab() {
+	public void printCurrentLab() {
+		System.out.println("Your labs : ");
 		for (String el : listLab) {
 			System.out.println(el);
 		}
@@ -106,7 +108,17 @@ public class Player {
 	/**
 	 * A method printing the energy level.
 	 */
-	void printEnergy() {
+	public void printEnergy() {
 		System.out.println("Your current level of energy : " + lvlEnergy);
+	}
+	
+	/**
+	 * A method printing all your stats. (energy, lectures and labs)
+	 */
+	public void printAllStats() {
+		System.out.println("Here are your stats : ");
+		printEnergy();
+		printCurrentLecture();
+		printCurrentLab();
 	}
 }
