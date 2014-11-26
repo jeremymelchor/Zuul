@@ -1,4 +1,4 @@
-package command;
+package main;
 
 import java.util.Scanner;
 
@@ -20,7 +20,6 @@ import java.util.Scanner;
  */
 public class Parser 
 {
-    private CommandWords commands;  // holds all valid command words
     private Scanner reader;         // source of command input
 
     /**
@@ -28,21 +27,20 @@ public class Parser
      */
     public Parser() 
     {
-        commands = new CommandWords();
         reader = new Scanner(System.in);
     }
 
     /**
      * @return The next command from the user.
      */
-    public Command getCommand() 
+    public String getCommand() 
     {
         String word1 = null;
 
         System.out.print("> ");     // print prompt
         word1 = reader.nextLine();
 
-        return new Command(commands.getCommandWord(word1));
+        return word1;
     }
 
     /**
@@ -50,6 +48,6 @@ public class Parser
      */
     public void showCommands()
     {
-        commands.showAll();
+        
     }
 }
