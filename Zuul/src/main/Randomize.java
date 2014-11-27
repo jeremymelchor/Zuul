@@ -134,7 +134,7 @@ public class Randomize {
 		boolean found = false;
 		while (!found) {
 			int random = rand.nextInt(11);
-			// Je ne sais pas comment accéder aux arraylist de Player.java
+			// Je ne sais pas comment accéder aux arraylist de Player.java 
 		}
 
 	}
