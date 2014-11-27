@@ -102,7 +102,7 @@ public class Player {
 		return null; // we should never return null.
 	}
 
-	public String whatLabToAttend() {
+	public String whatLabToAttend() { 
 	    for (String eltLecture : listLecture) {
 	    	if (!listLab.contains(eltLecture)) {
 	    		return eltLecture;
