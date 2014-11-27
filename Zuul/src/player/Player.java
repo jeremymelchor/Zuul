@@ -1,6 +1,7 @@
 package player;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Player {
 	/**
@@ -135,5 +136,18 @@ public class Player {
 		printEnergy();
 		printCurrentLecture();
 		printCurrentLab();
+	}
+	
+	public void forgetOneRandomLecture() {
+		boolean found = false;
+		Random rand = new Random();
+		while (!found) {
+			int random = rand.nextInt(11);
+			if (listLecture.contains(listLecture.get(random))) {
+				listLecture.set(random,null);
+				listLab.set(random,null);
+				
+			}
+		}
 	}
 }

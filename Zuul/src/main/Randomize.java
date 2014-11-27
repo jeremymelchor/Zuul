@@ -1,7 +1,6 @@
 package main;
 
 import java.util.Random;
-import player.*;
 
 /**
  * Class regrouping all randomize methods
@@ -128,15 +127,6 @@ public class Randomize {
 	 */
 	public boolean willHePlayBabyfoot() {
 		return determineRandomize(rand.nextInt(11), 7);
-	}
-
-	public void forgetOneRandomLecture() {
-		boolean found = false;
-		while (!found) {
-			int random = rand.nextInt(11);
-			// Je ne sais pas comment accéder aux arraylist de Player.java 
-		}
-
 	}
 
 	/**
