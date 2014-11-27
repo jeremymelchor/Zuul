@@ -1,6 +1,7 @@
 package player;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Player {
 	/**
@@ -15,10 +16,10 @@ public class Player {
 	public Player() {
 		initialize();
 	}
-	
+
 	/**
 	 * A method used to know the player's current level of energy.
-	 * 
+	 *
 	 * @return the level of energy.
 	 */
 	public int getLvlEnergy() {
@@ -27,7 +28,7 @@ public class Player {
 
 	/**
 	 * A method lowering the level of energy. The lowest possible level is 0.
-	 * 
+	 *
 	 * @param difference
 	 *            , in fact how many "points of energy" is lost.
 	 */
@@ -39,7 +40,7 @@ public class Player {
 
 	/**
 	 * A method raising the level of energy. The highest possible level is 100.
-	 * 
+	 *
 	 * @param difference
 	 *            , in fact how many "points of energy" is gained.
 	 */
@@ -64,11 +65,21 @@ public class Player {
 	/**
 	 * A method adding a lecture. Used when the player follows a lecture.
 	 */
-	void addLecture() {
-		int element = listLecture.size();
-		listLecture.add(completeList.get(element));
+	public void addLecture() {
+		listLecture.add(whatLectureToAttend());
 	}
 
+	/**
+	 * A method adding a lab. Used when the player follows a lab.
+	 */
+	public void addLab() {
+		if (whatLabToAttend() != null) {
+			listLab.add(whatLabToAttend());
+		} else {
+			System.out.println("Your labs are up to date !");
+		}
+	}
+	
 	/**
 	 * A method removing the last lecture. Used if the player forgets a lecture,
 	 * when spending too much time on video games...
@@ -89,6 +100,15 @@ public class Player {
 			}
 		}
 		return null; // we should never return null.
+	}
+
+	public String whatLabToAttend() {
+	    for (String eltLecture : listLecture) {
+	    	if (!listLab.contains(eltLecture)) {
+	    		return eltLecture;
+	    	}
+	    }
+	    return null; // in case there is no lab to attend
 	}
 
 	/**
@@ -135,5 +155,18 @@ public class Player {
 		printEnergy();
 		printCurrentLecture();
 		printCurrentLab();
+	}
+
+	public void forgetOneRandomLecture() {
+		boolean found = false;
+		Random rand = new Random();
+		while (!found) {
+			int random = rand.nextInt(10);
+			if (listLecture.contains(listLecture.get(random))) {
+				listLecture.set(random, null);
+				listLab.set(random, null);
+				found = true;
+			}
+		}
 	}
 }

@@ -12,7 +12,7 @@ public class PooBook extends Thing {
 	 */
 	@Override
 	public void use(Player player) {
-		// here the method adding a lecture
+		//player.addLecture();
 		System.out.println("You just read a POO book !");
 	}
 }

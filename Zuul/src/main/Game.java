@@ -174,9 +174,6 @@ public class Game {
 		case "coffee":
 			currentRoom.use(new Coffee(), player);
 			break;
-		case "babyfoot":
-			currentRoom.use(new Babyfoot(), player);
-			break;
 		case "lights":
 			currentRoom.switchLight();
 			break;
@@ -210,6 +207,7 @@ public class Game {
 			System.out.println("There is no door!");
 		} else {
 			currentRoom = nextRoom;
+			currentRoom.action();
 			System.out.println(currentRoom.getLongDescription());
 		}
 	}
