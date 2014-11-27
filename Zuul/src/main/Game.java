@@ -1,11 +1,11 @@
 package main;
-
+/** salut */
 import rooms.*;
 import player.*;
 import things.*;
 
 public class Game {
-	Room currentRoom;
+    Room currentRoom;
     public Player player;
     private Parser parser;
 	
