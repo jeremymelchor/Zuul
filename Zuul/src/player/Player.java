@@ -142,11 +142,11 @@ public class Player {
 		boolean found = false;
 		Random rand = new Random();
 		while (!found) {
-			int random = rand.nextInt(11);
+			int random = rand.nextInt(10);
 			if (listLecture.contains(listLecture.get(random))) {
 				listLecture.set(random,null);
 				listLab.set(random,null);
-				
+				found = true;
 			}
 		}
 	}
