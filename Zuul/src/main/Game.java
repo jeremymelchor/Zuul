@@ -50,9 +50,6 @@ public class Game {
         Room lunchRoom = new LunchRoom();
         Room print = new Print();
         Room secretariat = new Secretariat();
-        Room td1 = new Td();
-        Room td2 = new Td();
-        Room td3 = new Td();
         Room c1 = new Corridor();
         Room c2 = new Corridor();
         Room c3 = new Corridor();
@@ -65,20 +62,9 @@ public class Game {
         Room c10 = new Corridor();
         Room c11 = new Corridor();
         Room c12 = new Corridor();
-        Room c13 = new Corridor();
-        Room c14 = new Corridor();
-        Room c15 = new Corridor();
-        Room c16 = new Corridor();
-        Room c17 = new Corridor();
-        Room c18 = new Corridor();
         Room u1 = new UselessRoom();
         Room u2 = new UselessRoom();
-        Room u3 = new UselessRoom();
-        Room u4 = new UselessRoom();
-        Room u5 = new UselessRoom();
-        Room u6 = new UselessRoom();
-        Room u7 = new UselessRoom();
-        
+        Room u3 = new UselessRoom();        
         
         foyer.setExit("north",c1);
         c1.setExit("north",c2);
@@ -105,17 +91,14 @@ public class Game {
         c6.setExit("north", c7);
         c6.setExit("south", c3);
         c6.setExit("east", lab1);
-        c6.setExit("west", td1);
         
         c7.setExit("north", c8);
         c7.setExit("south", c6);
         c7.setExit("east", lab2);
-        c7.setExit("west", td2);
         
         c8.setExit("north", c9);
         c8.setExit("south", c7);
         c8.setExit("east", lab3);
-        c8.setExit("west", td3);
         
         c9.setExit("north", c10);
         c9.setExit("south", c8);
