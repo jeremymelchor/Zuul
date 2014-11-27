@@ -1,10 +1,12 @@
 package rooms;
+import player.*;
+
 
 import java.util.ArrayList;
 import java.util.Set;
 import java.util.HashMap;
 
-import player.Player;
+import player.*;
 import things.Thing;
 
 /**
@@ -142,7 +144,12 @@ public class Room {
 	 * A method that will be used whenever you enter the room. It will be
 	 * defined in each class in the package rooms.
 	 */
-	public void action() {
+	public void action(Player player) {
 		/** Nothing */
+	}
+	
+	public boolean isLibraryOpen() {
+		/** Nothing */
+		return false;
 	}
 }

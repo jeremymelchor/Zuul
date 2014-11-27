@@ -1,4 +1,5 @@
 package rooms;
+import player.*;
 
 public class Corridor extends Room {
 	public Corridor() {

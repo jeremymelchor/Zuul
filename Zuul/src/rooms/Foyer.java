@@ -1,4 +1,5 @@
 package rooms;
+import player.*;
 
 import things.*;
 
@@ -20,7 +21,7 @@ public class Foyer extends Room {
 	}
 	
 	@Override
-	public void action() {
+	public void action(Player player) {
 		/** Nothing */
 	}
 }

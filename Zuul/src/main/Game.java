@@ -206,9 +206,14 @@ public class Game {
 		if (nextRoom == null) {
 			System.out.println("There is no door!");
 		} else {
-			currentRoom = nextRoom;
-			currentRoom.action();
-			System.out.println(currentRoom.getLongDescription());
+			// if we want to enter the library, we need to check it's open
+			if (nextRoom.getShortDescription().equals("at the library") && !(nextRoom.isLibraryOpen())) { 
+			    System.out.println("The library is closed. Try again later.");
+			} else {
+				currentRoom = nextRoom;
+				currentRoom.action(player);
+				System.out.println(currentRoom.getLongDescription());
+			}
 		}
 	}
 

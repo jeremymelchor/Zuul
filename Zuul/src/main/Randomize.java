@@ -62,6 +62,7 @@ public class Randomize {
 	 */
 	public boolean isTheLibraryOpen() {
 		return determineRandomize(rand.nextInt(11), 5);
+		//return false;
 	}
 
 	/**
