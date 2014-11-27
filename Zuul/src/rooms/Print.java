@@ -1,4 +1,5 @@
 package rooms;
+import player.*;
 
 public class Print extends Room {
     public Print() {

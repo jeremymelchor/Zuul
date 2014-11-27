@@ -1,4 +1,5 @@
 package rooms;
+import player.*;
 
 public class Lab extends Room {
     public Lab() {

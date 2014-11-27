@@ -1,4 +1,6 @@
 package rooms;
+import player.*;
+import player.*;
 
 public class LunchRoom extends Room {
     public LunchRoom() {

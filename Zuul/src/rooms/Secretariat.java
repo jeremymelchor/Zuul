@@ -1,4 +1,5 @@
 package rooms;
+import player.*;
 
 public class Secretariat extends Room {
 	public Secretariat() {
