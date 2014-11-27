@@ -22,4 +22,8 @@ public class Foyer extends Room {
 				.println("Here, you can drink coffe and play babyfoot.");
 	}
 	
+	@Override
+	public void action() {
+		/** Nothing */
+	}
 }

@@ -19,11 +19,12 @@ import things.Thing;
  */
 
 public class Room {
-	private String description;  // a description of the room	
+	private String description; // a description of the room
 	private boolean light; // representing if lights are on or off.
 	private HashMap<String, Room> exits; // all the exits
-	protected ArrayList<Thing> listOfThings ;  // a list of things you can possibly use in this room.
-	
+	protected ArrayList<Thing> listOfThings; // a list of things you can
+												// possibly use in this room.
+
 	/**
 	 * Create a room described "description". Initially, it has no exits.
 	 * "description" is something like "a kitchen" or "an open court yard".
@@ -33,9 +34,9 @@ public class Room {
 	 */
 	public Room(String description) {
 		this.description = description;
-		exits = new HashMap<>(); 
-    	listOfThings = new ArrayList<Thing>();
-    	light = false; 
+		exits = new HashMap<>();
+		listOfThings = new ArrayList<Thing>();
+		light = false;
 	}
 
 	/**
@@ -96,42 +97,52 @@ public class Room {
 	}
 
 	/**
-	 * A method doing what the player wants to do, if it's possible.
-	 * It uses the method use(..) defined in the class Thing.
+	 * A method doing what the player wants to do, if it's possible. It uses the
+	 * method use(..) defined in the class Thing.
 	 */
 	public void use(Thing whatToUse, Player player) {
-        if (isItUsable(whatToUse)) {
-            whatToUse.use(player);
-        } else {
-        	System.out.println("No ! You can't use this here !");
-        }
+		if (isItUsable(whatToUse)) {
+			whatToUse.use(player);
+		} else {
+			System.out.println("No ! You can't use this here !");
+		}
 	}
-	
+
 	/**
 	 * A method checking if an object is possible to be used in the room.
-	 * @param whatToUse, the object we want to check.
+	 * 
+	 * @param whatToUse
+	 *            , the object we want to check.
 	 * @return if it's possible or not.
 	 */
-    boolean isItUsable(Thing whatToUse) {
-	    // check if you can use this thing
-		for (Thing thing : listOfThings) { 
+	boolean isItUsable(Thing whatToUse) {
+		// check if you can use this thing
+		for (Thing thing : listOfThings) {
 			String name = thing.getDescription();
-			if (whatToUse.getDescription().equals(name)) {				
+			if (whatToUse.getDescription().equals(name)) {
 				return true;
 			}
 		}
 		return false;
 	}
-    
-    /**
-     * A method switching on or off the lights.
-     */
-    public void switchLight() {
-    	light = !light;
-    	if (light) {
-    		System.out.println("The lights are now on.");
-    	} else {
-    		System.out.println("The lights are now off.");
+
+	/**
+	 * A method switching on or off the lights.
+	 */
+	public void switchLight() {
+		light = !light;
+		if (light) {
+			System.out.println("The lights are now on.");
+		} else {
+			System.out.println("The lights are now off.");
 		}
+	}
+
+	/**
+	 * A method that will be used whenever you enter the room. It will be
+	 * defined in each class in the package rooms.
+	 */
+	public void action() {
+		/** Nothing */
 	}
 }
