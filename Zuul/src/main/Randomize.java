@@ -38,7 +38,7 @@ public class Randomize {
 	 * Determine if a room is about OOP, anything else or empty
 	 * 
 	 * @param rand
-	 *            will be the number randomly choser
+	 *            will be the number randomly chosen
 	 * @param test
 	 *            will be the limit that allows determining it'll about OOP,
 	 *            anything else or empty

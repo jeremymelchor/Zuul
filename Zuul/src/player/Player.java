@@ -15,7 +15,7 @@ public class Player {
 	public Player() {
 		initialize();
 	}
-
+	
 	/**
 	 * A method used to know the player's current level of energy.
 	 * 
@@ -54,7 +54,8 @@ public class Player {
 	 * filled by the user of the application.
 	 */
 	void initialize() {
-		String[] tab = { "POO 1", "POO 2", "POO 3", "POO 4", "POO 5", "POO 6", "POO 7", "POO 8", "POO 9", "POO 10" };
+		String[] tab = { "POO 1", "POO 2", "POO 3", "POO 4", "POO 5", "POO 6",
+				"POO 7", "POO 8", "POO 9", "POO 10" };
 		for (String el : tab) {
 			completeList.add(el);
 		}
@@ -70,22 +71,26 @@ public class Player {
 
 	/**
 	 * A method removing the last lecture. Used if the player forgets a lecture,
-	 * when spending too much time on video game...
+	 * when spending too much time on video games...
 	 */
 	void removeLecture() {
 		listLecture.remove(listLecture.size() - 1);
 	}
 
-	
-	
+	/**
+	 * A method finding the lecture the player should attend.
+	 * @return the name of the lecture.
+	 */
 	public String whatLectureToAttend() {
-		for (String el : completeList) {
-
+		// finds the first element of complete list that is not in listLecture.
+		for (String missingElt : completeList) {
+			if (!listLecture.contains(missingElt)) {
+			    return missingElt;
+			}
 		}
-		return null;
+		return null; // we should never return null.
 	}
-	
-	
+
 	/**
 	 * A method printing every possible lecture.
 	 */
@@ -121,7 +126,7 @@ public class Player {
 	public void printEnergy() {
 		System.out.println("Your current level of energy : " + lvlEnergy);
 	}
-	
+
 	/**
 	 * A method printing all your stats. (energy, lectures and labs)
 	 */
