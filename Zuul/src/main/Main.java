@@ -8,7 +8,11 @@ public class Main {
     	//Game a = new Game();
     	//a.play();
     	Player a = new Player();
-    	a.whatLectureToAttend();
+    	a.addLecture();
+    	a.addLecture();
+    	a.forgetOneRandomLecture();
+    	a.printCurrentLecture();
+    	a.printCurrentLab();
     	
     }
 }

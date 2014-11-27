@@ -79,14 +79,6 @@ public class Player {
 			System.out.println("Your labs are up to date !");
 		}
 	}
-	
-	/**
-	 * A method removing the last lecture. Used if the player forgets a lecture,
-	 * when spending too much time on video games...
-	 */
-	void removeLecture() {
-		listLecture.remove(listLecture.size() - 1);
-	}
 
 	/**
 	 * A method finding the lecture the player should attend.
@@ -161,11 +153,16 @@ public class Player {
 		boolean found = false;
 		Random rand = new Random();
 		while (!found) {
-			int random = rand.nextInt(10);
+			int random = rand.nextInt(listLecture.size());
+			System.out.println("random : "+random);
 			if (listLecture.contains(listLecture.get(random))) {
-				listLecture.set(random, null);
-				listLab.set(random, null);
-				found = true;
+					listLecture.remove(random);
+					System.out.println("taille lab"+listLab.size());
+					//if (listLab.contains(listLab.get(random))) {
+						//listLab.remove(random);
+						//System.out.println("yolo");
+					//}
+					found = true;
 			}
 		}
 	}
