@@ -16,15 +16,13 @@ import things.Thing;
  * A "Room" represents one location in the scenery of the game. It is connected
  * to other rooms via exits. For each existing exit, the room stores a reference
  * to the neighboring room.
- * 
- * @author Michael Kölling and David J. Barnes
- * @version 2011.08.08
  */
 
 public class Room {
-	private String description;
-	private HashMap<String, Room> exits; // stores exits of this room.
-	protected ArrayList<Thing> listOfThings ;
+	private String description;  // a description of the room	
+	private boolean light; // representing if lights are on or off.
+	private HashMap<String, Room> exits; // all the exits
+	protected ArrayList<Thing> listOfThings ;  // a list of things you can possibly use in this room.
 	
 	/**
 	 * Create a room described "description". Initially, it has no exits.
@@ -35,8 +33,9 @@ public class Room {
 	 */
 	public Room(String description) {
 		this.description = description;
-		exits = new HashMap<>();
+		exits = new HashMap<>(); 
     	listOfThings = new ArrayList<Thing>();
+    	light = false; 
 	}
 
 	/**
@@ -122,5 +121,17 @@ public class Room {
 			}
 		}
 		return false;
+	}
+    
+    /**
+     * A method switching on or off the lights.
+     */
+    public void switchLight() {
+    	light = !light;
+    	if (light) {
+    		System.out.println("The lights are now on.");
+    	} else {
+    		System.out.println("The lights are now off.");
+		}
 	}
 }

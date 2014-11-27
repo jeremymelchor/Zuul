@@ -46,7 +46,6 @@ public class Game {
 		Room lunchRoom = new LunchRoom();
 		Room print = new Print();
 		Room secretariat = new Secretariat();
-		Room td1 = new Td(); // 3 salles de td
 		Room c1 = new Corridor();
 
 		foyer.setExit("north", c1);
@@ -138,6 +137,10 @@ public class Game {
 			
 		case "babyfoot":
 			currentRoom.use(new Babyfoot(), player);
+			break;
+			
+		case "lights" :
+			currentRoom.switchLight();
 			break;
 			
 		default:

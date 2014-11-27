@@ -54,7 +54,7 @@ public class Player {
 	 * filled by the user of the application.
 	 */
 	void initialize() {
-		String[] tab = { "POO 1", "POO 2", "POO 3" };
+		String[] tab = { "POO 1", "POO 2", "POO 3", "POO 4", "POO 5", "POO 6", "POO 7", "POO 8", "POO 9", "POO 10" };
 		for (String el : tab) {
 			completeList.add(el);
 		}
@@ -76,10 +76,20 @@ public class Player {
 		listLecture.remove(listLecture.size() - 1);
 	}
 
+	
+	
+	public String whatLectureToAttend() {
+		for (String el : completeList) {
+
+		}
+		return null;
+	}
+	
+	
 	/**
 	 * A method printing every possible lecture.
 	 */
-	public void printAll() {
+	public void printAllPossibleLecture() {
 		for (String el : completeList) {
 			System.out.println(el);
 		}
