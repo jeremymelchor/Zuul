@@ -16,7 +16,7 @@ import java.util.Scanner;
 public class Quiz {
     private ArrayList<String> questions = new ArrayList<String>();
     /* One answer looks like : {choice1, choice2, trueAnswer}, all strings 
-     * So the whole liste looks like : 
+     * So the whole list looks like : 
      *    {{choice1,choice2,trueAnswer}, {choice1,choice2,trueAnswer}, ..... }
      * */
     private ArrayList<ArrayList<String>> reponses = new ArrayList<ArrayList<String>>();
