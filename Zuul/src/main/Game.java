@@ -10,8 +10,8 @@ public class Game {
     private Parser parser;
 	
     public Game() throws InterruptedException {
-    	Player player = new Player();
-    	parser = new Parser();
+		player = new Player();
+		parser = new Parser();
     }
     
     /**
@@ -189,7 +189,23 @@ public class Game {
         case "quit":
             wantToQuit = quit(command);
             break;
-        
+ 
+		case "stats":
+			printStats();
+			break;
+
+		case "coffee":
+			currentRoom.use(new Coffee(), player);
+			break; 
+			
+		case "babyfoot":
+			currentRoom.use(new Babyfoot(), player);
+			break;
+			
+		case "lights" :
+			currentRoom.switchLight();
+			break;
+            
         default:
         	System.out.println("I don't know what you mean...");
             break;
@@ -236,4 +252,12 @@ public class Game {
     private boolean quit(String command) {
             return true; // signal that we want to quit
     }    
+    
+	/**
+	 * A method printing all the player's stats in case he wants to know his
+	 * energy level, his current lectures and current labs.
+	 */
+	private void printStats() {
+		player.printAllStats();
+	}
 }
