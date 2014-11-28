@@ -38,4 +38,5 @@ public enum Language {
 	private final static String[] en = {"Hello !"};
 	
 	
+	
 }
