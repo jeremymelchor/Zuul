@@ -265,7 +265,7 @@ public class Game {
 	}
 	
 	private void whatLanguage() {
-		System.out.println("Language ? EN / FR / ES");
+		System.out.println("Language ? EN / FR");
 		String lang = parser.getCommand();
 		Language.setLanguage(lang);
 	}
