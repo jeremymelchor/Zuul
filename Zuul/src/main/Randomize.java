@@ -56,13 +56,24 @@ public class Randomize {
 	}
 
 	/**
+	 * A method returning a random between 0 and a number (excluded).
+	 * 
+	 * @param max
+	 *            : the max.
+	 * @return the random number.
+	 */
+	public int getRandomBetween0and(int max) {
+		return rand.nextInt(max);
+	}
+
+	/**
 	 * Determine if the library is open or not
 	 * 
 	 * @return true means library open
 	 */
 	public boolean isTheLibraryOpen() {
 		return determineRandomize(rand.nextInt(11), 5);
-		//return false;
+		// return false;
 	}
 
 	/**

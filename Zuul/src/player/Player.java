@@ -3,6 +3,8 @@ package player;
 import java.util.ArrayList;
 import java.util.Random;
 
+import main.Randomize;
+
 public class Player {
 	/**
 	 * The player starts with 100 points of energy. Every actions will change
@@ -82,25 +84,26 @@ public class Player {
 
 	/**
 	 * A method finding the lecture the player should attend.
+	 * 
 	 * @return the name of the lecture.
 	 */
 	public String whatLectureToAttend() {
 		// finds the first element of complete list that is not in listLecture.
 		for (String missingElt : completeList) {
 			if (!listLecture.contains(missingElt)) {
-			    return missingElt;
+				return missingElt;
 			}
 		}
 		return null; // we should never return null.
 	}
 
 	public String whatLabToAttend() {
-	    for (String eltLecture : listLecture) {
-	    	if (!listLab.contains(eltLecture)) {
-	    		return eltLecture;
-	    	}
-	    }
-	    return null; // in case there is no lab to attend
+		for (String eltLecture : listLecture) {
+			if (!listLab.contains(eltLecture)) {
+				return eltLecture;
+			}
+		}
+		return null; // in case there is no lab to attend
 	}
 
 	/**
@@ -150,20 +153,14 @@ public class Player {
 	}
 
 	public void forgetOneRandomLecture() {
-		boolean found = false;
-		Random rand = new Random();
-		while (!found) {
-			int random = rand.nextInt(listLecture.size());
-			System.out.println("random : "+random);
-			if (listLecture.contains(listLecture.get(random))) {
-					listLecture.remove(random);
-					System.out.println("taille lab"+listLab.size());
-					//if (listLab.contains(listLab.get(random))) {
-						//listLab.remove(random);
-						//System.out.println("yolo");
-					//}
-					found = true;
-			}
+		Randomize random = new Randomize();
+		int chosenRank = random.getRandomBetween0and(listLecture.size());
+		System.out.println(chosenRank);
+		String chosenElt = listLecture.get(chosenRank);
+		System.out.println(chosenElt);
+		if (listLab.contains(chosenElt)) {
+			listLab.remove(chosenElt);
 		}
+		listLecture.remove(chosenElt);
 	}
 }

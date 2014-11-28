@@ -202,6 +202,9 @@ public class Game {
 		case "lights":
 			currentRoom.switchLight();
 			break;
+		case "babyfoot":
+			currentRoom.use(new Babyfoot(), player);
+			break;
 		default:
 			System.out.println("I don't know what you mean...");
 			break;
