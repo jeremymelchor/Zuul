@@ -150,19 +150,14 @@ public class Game {
 			String command = parser.getCommand();
 			finished = processCommand(command);
 		}
-		System.out.println("Thank you for playing. Good bye.");
+		System.out.println(Language.EXIT);
 	}
 
 	/**
 	 * Print out the opening message for the player.
 	 */
 	private void printWelcome() {
-		System.out.println();
-		System.out.println("Welcome to the World of Zuul!");
-		System.out
-				.println("World of Zuul is a new, incredibly boring adventure game.");
-		System.out.println("Type \"help\" if you need help.");
-		System.out.println();
+		System.out.println(Language.HELLO);
 		System.out.println(currentRoom.getLongDescription());
 	}
 
@@ -207,7 +202,7 @@ public class Game {
 			currentRoom.use(new Babyfoot(), player);
 			break;
 		default:
-			System.out.println("I don't know what you mean...");
+			System.out.println(Language.DUNNO);
 			break;
 		}
 		return wantToQuit;
@@ -219,8 +214,7 @@ public class Game {
 	 * message and a list of the command words.
 	 */
 	private void printHelp() {
-		System.out.println();
-		System.out.println("Your command words are:");
+		System.out.println(Language.HELP);
 		parser.showCommands();
 	}
 
@@ -233,12 +227,12 @@ public class Game {
 		// Try to leave current room.
 		Room nextRoom = currentRoom.getExit(direction);
 		if (nextRoom == null) {
-			System.out.println("There is no door!");
+			System.out.println(Language.NODOOR);
 		} else {
 			// if we want to enter the library, we need to check it's open
 			if (nextRoom.getShortDescription().equals("at the library") && !(nextRoom.specialAction(player))) { 
-			    System.out.println("The library is closed. Try again later.");
-			} else if (nextRoom.getShortDescription().equals("in a lecture") || nextRoom.getShortDescription().equals("in a lab")) {
+			    System.out.println(Language.LIBRARY_CLOSED);
+			} else if (nextRoom.getShortDescription().equals(Language.LECTURE) || nextRoom.getShortDescription().equals(Language.LAB)) {
 				boolean choice = nextRoom.specialAction(player);
 				if (choice) {
 					currentRoom = nextRoom;

@@ -3,6 +3,7 @@ package main;
 public enum Language {
 
 	HELLO(""),
+	EXIT(""),
 	DUNNO(""),
 	NODOOR(""),
 	LIBRARY_CLOSED(""),
@@ -29,8 +30,8 @@ public enum Language {
 	PLAY_VIDEO_GAME(""),
 	LUNCH_ROOM(""),
 	PRINT_ROOM(""),
+	EXITS_LIST(""),
 	YOU_ARE(""),
-	EXIT(""),
 	NO_USABLE(""),
 	LIGHTS_ON(""),
 	LIGHTS_OFF(""),
@@ -40,7 +41,17 @@ public enum Language {
 	COFFE(""),
 	DRINK_COFFE(""),
 	OOP_BOOK(""),
-	OOP_READ("");
+	OOP_READ(""),
+	NOT_OOP_COURSE(""),
+	FOLLOW_COURSE(""),
+	KICKED_ROOM(""),
+	OOP_COURSE(""),
+	EMPTY_ROOM(""),
+	YES(""),
+	NOT_OOP_LAB(""),
+	FOLLOW_LAB(""),
+	OOP_LAB(""),
+	MESSY("");
 	
 	private String str;
 
@@ -80,11 +91,12 @@ public enum Language {
 	}
 
 	private final static String[] fr = {
-			"Bienvenue dans le monde de Zuul !"
-					+ "Le monde de Zuul est un nouveau et incroyable jeu d'aventure absolument pas ennuyant !"
+			"\nBienvenue dans le monde de Zuul !\n"
+					+ "Le monde de Zuul est un nouveau et incroyable jeu d'aventure absolument pas ennuyant !\n"
 					+ "Tapez \"aide\" si vous avez besoin d'aide.\n",
+			"Merci d'avoir joué ! Au revoir.",
 			"Je n'ai pas compris votre commande",
-			"Vos actions possibles sont : ",
+			"\nVos actions possibles sont : ",
 			"Il n'y a pas de portes !",
 			"La librairie est fermée. Réessayez plus tard.",
 			"Mouvements: nord / sud / est / ouest" + "Actions: "
@@ -111,7 +123,7 @@ public enum Language {
 			"Vous avez joué à un jeu vidéo. Vous avez oublié un cours.",
 			"dans la cafétéria",
 			"dans l'imprimerie",
-			"Vous êtes ",
+			"Vous êtes",
 			"Sorties:",
 			"Vous ne pouvez pas utiliser ça ici !",
 			"Les lumières sont allumés.",
@@ -122,14 +134,25 @@ public enum Language {
 			"café",
 			"Vous venez de boire un café. Energie +10",
 			"livre de POO",
-			"Vous venez juste de lire un livre de POO !" };
+			"Vous venez juste de lire un livre de POO !",
+			"Ce n'est pas un cours de POO. Voulez-vous assister au cours ?",
+			"Vous avez suivi le cours. Energie -10",
+			"Vous avez été viré de la salle.",
+			"C'est un cours de POO. Vous le suivez. Vous avez appris un nouveau cours ! Energie -10",
+			"La salle est vide.",
+			"oui",
+			"Ce n'est pas un TD de POO. Voulez-vous assister au TD ?",
+			"Vous avez suivi le TD. Energie -10",
+			"C'est un TD de POO. Vous le suivez. Vous avez appris un nouveau TD ! Energie -10",
+			"Wow ! C'est le bordel ici ! Vous ferez mieux de partir !"};
 
 	private final static String[] en = {
-			"Welcome to the World of Zuul!"
-					+ "World of Zuul is a new, incredibly and not boring adventure game."
+			"\nWelcome to the World of Zuul!\n"
+					+ "World of Zuul is a new, incredibly and not boring adventure game.\n"
 					+ "Type \"help\" if you need help.\n",
+			"Thank you for playing. Good bye.",
 			"I don't know what you mean...",
-			"Your command words are:",
+			"\nYour command words are:",
 			"There is no door!",
 			"The library is closed. Try again later.",
 			"moves: north / south / east / west" + "interact: "
@@ -167,5 +190,15 @@ public enum Language {
 			"coffe",
 			"You just drank a coffe. Energy +10.",
 			"OOP book",
-			"You just read an OOP book !" };
+			"You just read an OOP book !",
+			"This is not an OOP class. Would you like to follow it ?",
+			"You followed the class. Energy -10",
+			"You were kicked out of the room.",
+			"This is an OOP class. You follow it. You learned a new lecture. Energy -10",
+			"The room is empty.",
+			"yes",
+			"This is not an OOP lab. Would you like to follow it ?",
+			"You followed the lab. Energy -10",
+			"This is an OOP lab. You follow it. You learned a new labs. Energy -10",
+			"Wow ! It's messy here ! You better get out of here !" };
 }

@@ -3,6 +3,7 @@ package player;
 import java.util.ArrayList;
 import java.util.Random;
 
+import main.Language;
 import main.Randomize;
 
 public class Player {
@@ -78,7 +79,7 @@ public class Player {
 		if (whatLabToAttend() != null) {
 			listLab.add(whatLabToAttend());
 		} else {
-			System.out.println("Your labs are up to date !");
+			System.out.println(Language.UPTODATE);
 		}
 	}
 
@@ -119,7 +120,7 @@ public class Player {
 	 * A method printing which lecture the player learned so far.
 	 */
 	public void printCurrentLecture() {
-		System.out.println("Your lectures : ");
+		System.out.println(Language.LECTURE);
 		for (String el : listLecture) {
 			System.out.println(el);
 		}
@@ -129,7 +130,7 @@ public class Player {
 	 * A method printing which lab the player learned so far.
 	 */
 	public void printCurrentLab() {
-		System.out.println("Your labs : ");
+		System.out.println(Language.LAB);
 		for (String el : listLab) {
 			System.out.println(el);
 		}
@@ -139,14 +140,14 @@ public class Player {
 	 * A method printing the energy level.
 	 */
 	public void printEnergy() {
-		System.out.println("Your current level of energy : " + lvlEnergy);
+		System.out.println(Language.ENERGY_LEVEL +" "+ lvlEnergy);
 	}
 
 	/**
 	 * A method printing all your stats. (energy, lectures and labs)
 	 */
 	public void printAllStats() {
-		System.out.println("Here are your stats : ");
+		System.out.println(Language.STATS);
 		printEnergy();
 		printCurrentLecture();
 		printCurrentLab();

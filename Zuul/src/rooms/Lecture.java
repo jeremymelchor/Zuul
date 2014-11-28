@@ -1,5 +1,6 @@
 package rooms;
 
+import main.Language;
 import main.Parser;
 import main.Randomize;
 import player.*;
@@ -27,24 +28,24 @@ public class Lecture extends Room {
 		int choice = random.isItOOP();
 		if (choice == 0) { // we are in not in an OOP class (we may follow it)
 			System.out
-					.println("This is not an OOP class. Would you like to follow it ?");
+					.println(Language.NOT_OOP_COURSE);
 			Parser pa = new Parser();
 			String ans = pa.getCommand();
-			if (ans.equals("yes")) {
+			if (ans.equals(Language.YES)) {
 				player.lowEnergy(10);
-				System.out.println("You followed the class. Energy -10");
+				System.out.println(Language.FOLLOW_COURSE);
 				return true;
 			} else {
-				System.out.println("You were kicked out of the room.");
+				System.out.println(Language.KICKED_ROOM);
 				return false;
 			}
 		} else if (choice == 1) { // we are in an OOP class (we must follow it)
 			System.out
-					.println("This is an OOP class. You follow it. You learned a new lecture. Energy -10");
+					.println(Language.OOP_COURSE);
 			player.addLecture();
 			player.lowEnergy(10);
 		} else { // the room is empty (we can do whatever we want)
-			System.out.println("The room is empty.");
+			System.out.println(Language.EMPTY_ROOM);
 			return true;
 		}
 		return false;

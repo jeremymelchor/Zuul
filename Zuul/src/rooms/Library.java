@@ -1,6 +1,5 @@
 package rooms;
 import player.*;
-
 import main.*;
 
 public class Library extends Room {
@@ -18,18 +17,18 @@ public class Library extends Room {
     	// first, the book.
     	if (random.creatingTheCheatBook()) {
     		player.addLecture();
-    		System.out.println("You found an OOP book ! You learned a OOP lecture.");
+    		System.out.println(Language.FIND_BOOK);
     	} 
     	// now, about the tablet.
-    	System.out.print("You found a tablet. ");
+    	System.out.print(Language.FIND_TABLETTE);
     	if (random.isItAGameOrAnOnlineLecture()) {
     		// it's a online lecture.
     		player.addLecture();
-    		System.out.println("You learned a OOP lecture.");
+    		System.out.println(Language.LEARN_LECTURE);
     	} else if (random.isItWorldOfZuulGameOnTablet()) {
-    		System.out.println("You played a game of World of Zuul ! So much fun.");
+    		System.out.println(Language.PLAY_WORLD_OF_ZUUL);
     	} else {
-    		System.out.println("You played a video game. You forgot one lecture.");
+    		System.out.println(Language.PLAY_VIDEO_GAME);
     		// here player.forgetOneRandomLecture();
     	}
     }

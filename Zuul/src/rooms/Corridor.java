@@ -1,4 +1,5 @@
 package rooms;
+import main.Language;
 import player.*;
 
 public class Corridor extends Room {
@@ -9,6 +10,6 @@ public class Corridor extends Room {
 	void printDescription() {
 		System.out.println(this.getLongDescription());
 		System.out
-				.println("This corridor is amazing ! But there's nothing for you here !");
+				.println(Language.AMAZING);
 	}
 }

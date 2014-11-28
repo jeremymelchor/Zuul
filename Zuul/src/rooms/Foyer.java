@@ -1,6 +1,6 @@
 package rooms;
+import main.Language;
 import player.*;
-
 import things.*;
 
 public class Foyer extends Room {
@@ -8,7 +8,7 @@ public class Foyer extends Room {
 	private Coffee coffee;
 	
     public Foyer() {
-        super("at the foyer");
+        super("in the foyer");
     	coffee = new Coffee();
     	listOfThings.add(coffee);
     }	
@@ -17,7 +17,7 @@ public class Foyer extends Room {
 	void printDescription() {
 		System.out.println(this.getLongDescription());
 		System.out
-				.println("Here, you can drink coffe.");
+				.println(Language.DRINK_COFFE);
 	}
 	
 	@Override

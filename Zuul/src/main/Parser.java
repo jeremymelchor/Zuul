@@ -48,8 +48,6 @@ public class Parser
      */
     public void showCommands()
     {
-        System.out.println("moves: north / south / east / west");
-        System.out.println("interact: ");
-        System.out.println("options: quit / help");
+        System.out.println(Language.HELP);
     }
 }
