@@ -42,14 +42,4 @@ public class Parser
 
         return word1;
     }
-
-    /**
-     * Print out a list of valid command words.
-     */
-    public void showCommands()
-    {
-        System.out.println("moves: north / south / east / west");
-        System.out.println("interact: ");
-        System.out.println("options: quit / help");
-    }
 }

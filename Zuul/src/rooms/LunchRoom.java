@@ -1,6 +1,6 @@
 package rooms;
-import player.*;
 
+import main.Language;
 import things.*;
 
 public class LunchRoom extends Room {
@@ -8,7 +8,7 @@ public class LunchRoom extends Room {
 	private Babyfoot babyfoot;
 	
     public LunchRoom() {
-        super("in the lunch room");
+        super(Language.LUNCH_ROOM.toString());
     	coffee = new Coffee();
     	babyfoot = new Babyfoot();
     	listOfThings.add(coffee);   

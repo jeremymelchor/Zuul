@@ -1,8 +1,8 @@
 package rooms;
-import player.*;
+import main.Language;
 
 public class Exam extends Room {
     public Exam() {
-        super("in the exam classroom");
+        super(Language.EXAM_ROOM.toString());
     }	
 }

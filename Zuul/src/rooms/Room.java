@@ -1,12 +1,11 @@
 package rooms;
 import player.*;
 
-
 import java.util.ArrayList;
 import java.util.Set;
 import java.util.HashMap;
 
-import player.*;
+import main.Language;
 import things.Thing;
 
 /**
@@ -68,7 +67,7 @@ public class Room {
 	 * @return A long description of this room
 	 */
 	public String getLongDescription() {
-		return "You are " + description + ".\n" + getExitString();
+		return Language.YOU_ARE +" "+ description + ".\n" + getExitString();
 	}
 
 	/**
@@ -78,7 +77,7 @@ public class Room {
 	 * @return Details of the room's exits.
 	 */
 	private String getExitString() {
-		String returnString = "Exits:";
+		String returnString = Language.EXIT_WORD.toString();
 		Set<String> keys = exits.keySet();
 		for (String exit : keys) {
 			returnString += " " + exit;
@@ -106,7 +105,7 @@ public class Room {
 		if (isItUsable(whatToUse)) {
 			whatToUse.use(player);
 		} else {
-			System.out.println("No ! You can't use this here !");
+			System.out.println(Language.NO_USABLE);
 		}
 	}
 
@@ -134,9 +133,9 @@ public class Room {
 	public void switchLight() {
 		light = !light;
 		if (light) {
-			System.out.println("The lights are now on.");
+			System.out.println(Language.LIGHTS_ON);
 		} else {
-			System.out.println("The lights are now off.");
+			System.out.println(Language.LIGHTS_OFF);
 		}
 	}
 

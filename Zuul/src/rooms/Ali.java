@@ -1,9 +1,10 @@
 package rooms;
+import main.Language;
 import player.*;
 
 public class Ali extends Room {
 	public Ali() {
-		super("Ali's office");
+		super(Language.ALI.toString());
 	}
 	
 	/**
@@ -11,6 +12,6 @@ public class Ali extends Room {
 	 */
 	@Override
 	public void action(Player player) {
-		System.out.println("Wow ! It's messy here ! You better get out of here !");
+		System.out.println(Language.MESSY);
 	}
 }
