@@ -64,46 +64,71 @@ public class Game {
 		Room c12 = new Corridor();
 		Room u1 = new UselessRoom();
 		Room u2 = new UselessRoom();
-		Room u3 = new UselessRoom();
-		foyer.setExit("north", c1);
+		
 		c1.setExit("north", c2);
 		c1.setExit("south", foyer);
 		c1.setExit("east", lecture1);
 		c1.setExit("west", secretariat);
+		
 		c2.setExit("north", c3);
 		c2.setExit("south", c1);
 		c2.setExit("east", lecture2);
 		c2.setExit("west", u1);
+		
 		c3.setExit("north", c6);
 		c3.setExit("south", c2);
 		c3.setExit("east", lecture3);
 		c3.setExit("west", c4);
+		
 		c4.setExit("east", c3);
 		c4.setExit("west", c5);
+		
 		c5.setExit("south", exam);
 		c5.setExit("east", c4);
+		
 		c6.setExit("north", c7);
 		c6.setExit("south", c3);
 		c6.setExit("east", lab1);
+		
 		c7.setExit("north", c8);
 		c7.setExit("south", c6);
 		c7.setExit("east", lab2);
+		
 		c8.setExit("north", c9);
 		c8.setExit("south", c7);
 		c8.setExit("east", lab3);
+		
 		c9.setExit("north", c10);
 		c9.setExit("south", c8);
 		c9.setExit("east", c11);
 		c9.setExit("west", lunchRoom);
+		
 		c10.setExit("north", library);
 		c10.setExit("south", c9);
-		c10.setExit("east", u2);
+		
 		c11.setExit("east", c12);
 		c11.setExit("west", c9);
+		
 		c12.setExit("north", ali);
 		c12.setExit("south", print);
-		c12.setExit("east", u3);
+		c12.setExit("east", u2);
 		c12.setExit("west", c11);
+		
+		lecture1.setExit("west",c1);
+		lecture2.setExit("west",c2);
+		lecture3.setExit("west",c3);
+		lab1.setExit("west",c6);
+		lab2.setExit("west",c7);
+		lab3.setExit("west",c8);
+		secretariat.setExit("east",c1);
+		exam.setExit("north",c5);
+		u1.setExit("east",c2);
+		u2.setExit("west",c12);
+		lunchRoom.setExit("east",c9);
+		library.setExit("south",c10);
+		print.setExit("north",c12);
+		foyer.setExit("north", c1);
+		ali.setExit("south",c12);
 		currentRoom = foyer;
 	}
 
