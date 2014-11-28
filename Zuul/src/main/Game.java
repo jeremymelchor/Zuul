@@ -141,6 +141,7 @@ public class Game {
 	 */
 	public void play() {
 		createRooms();
+		whatLanguage();
 		printWelcome();
 		// Enter the main command loop. Here we repeatedly read commands and
 		// execute them until the game is over.
@@ -261,5 +262,11 @@ public class Game {
 	 */
 	private void printStats() {
 		player.printAllStats();
+	}
+	
+	private void whatLanguage() {
+		System.out.println("Language ? EN / FR / ES");
+		String lang = parser.getCommand();
+		Language.setLanguage(lang);
 	}
 }
