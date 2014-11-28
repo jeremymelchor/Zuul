@@ -1,24 +1,23 @@
 package rooms;
+
+import main.Language;
 import player.*;
 
 public class Secretariat extends Room {
 	public Secretariat() {
-		super("at the secretariat");
+		super(Language.SECRETARIAT.toString());
 	}
-
 
 	void printDescription() {
 		System.out.println(this.getLongDescription());
-		System.out
-				.println("There are people here, they don't seem to acknoledge you. You should probably leave.");
+		System.out.println(Language.PEOPLE_HERE);
 	}
-	
+
 	/**
 	 * Here the action is very limited...
 	 */
 	@Override
 	public void action(Player player) {
-		System.out.println("There are people here, they don't seem to acknoledge you. You should probably leave.");
+		System.out.println(Language.PEOPLE_HERE);
 	}
-
 }

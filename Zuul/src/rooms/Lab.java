@@ -1,13 +1,15 @@
 package rooms;
+
+import main.Language;
 import main.Parser;
 import main.Randomize;
 import player.*;
 
-public class Lab  extends Room {
+public class Lab extends Room {
 	Randomize random;
 
 	public Lab() {
-		super("in a lab");
+		super(Language.LAB.toString());
 		random = new Randomize();
 	}
 
@@ -17,33 +19,31 @@ public class Lab  extends Room {
 	}
 
 	/**
-	 * A method deciding what is in the lab. In case it's not an OOP class,
-	 * it asks if you want to follow it.
+	 * A method deciding what is in the lab. In case it's not an OOP class, it
+	 * asks if you want to follow it.
 	 */
 	@Override
 	public boolean specialAction(Player player) {
 		// first, let's see what lecture is in the classroom.
 		int choice = random.isItOOP();
 		if (choice == 0) { // we are in not in an OOP class (we may follow it)
-			System.out
-					.println("This is not an OOP lab. Would you like to follow it ?");
+			System.out.println(Language.NOT_OOP_LAB);
 			Parser pa = new Parser();
 			String ans = pa.getCommand();
-			if (ans.equals("yes")) {
+			if (ans.equals(Language.YES_WORD.toString())) {
 				player.lowEnergy(10);
-				System.out.println("You followed the lab. Energy -10");
+				System.out.println(Language.FOLLOW_LAB);
 				return true;
 			} else {
-				System.out.println("You were kicked out of the room.");
+				System.out.println(Language.KICKED_ROOM);
 				return false;
 			}
 		} else if (choice == 1) { // we are in an OOP class (we must follow it)
-			System.out
-					.println("This is an OOP lab. You follow it. You learned a new labs. Energy -10");
+			System.out.println(Language.OOP_LAB);
 			player.addLab();
 			player.lowEnergy(10);
 		} else { // the room is empty (we can do whatever we want)
-			System.out.println("The room is empty.");
+			System.out.println(Language.EMPTY_ROOM);
 			return true;
 		}
 		return false;

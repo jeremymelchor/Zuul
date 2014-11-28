@@ -64,71 +64,58 @@ public class Game {
 		Room c12 = new Corridor();
 		Room u1 = new UselessRoom();
 		Room u2 = new UselessRoom();
-		
-		c1.setExit("north", c2);
-		c1.setExit("south", foyer);
-		c1.setExit("east", lecture1);
-		c1.setExit("west", secretariat);
-		
-		c2.setExit("north", c3);
-		c2.setExit("south", c1);
-		c2.setExit("east", lecture2);
-		c2.setExit("west", u1);
-		
-		c3.setExit("north", c6);
-		c3.setExit("south", c2);
-		c3.setExit("east", lecture3);
-		c3.setExit("west", c4);
-		
-		c4.setExit("east", c3);
-		c4.setExit("west", c5);
-		
-		c5.setExit("south", exam);
-		c5.setExit("east", c4);
-		
-		c6.setExit("north", c7);
-		c6.setExit("south", c3);
-		c6.setExit("east", lab1);
-		
-		c7.setExit("north", c8);
-		c7.setExit("south", c6);
-		c7.setExit("east", lab2);
-		
-		c8.setExit("north", c9);
-		c8.setExit("south", c7);
-		c8.setExit("east", lab3);
-		
-		c9.setExit("north", c10);
-		c9.setExit("south", c8);
-		c9.setExit("east", c11);
-		c9.setExit("west", lunchRoom);
-		
-		c10.setExit("north", library);
-		c10.setExit("south", c9);
-		
-		c11.setExit("east", c12);
-		c11.setExit("west", c9);
-		
-		c12.setExit("north", ali);
-		c12.setExit("south", print);
-		c12.setExit("east", u2);
-		c12.setExit("west", c11);
-		
-		lecture1.setExit("west",c1);
-		lecture2.setExit("west",c2);
-		lecture3.setExit("west",c3);
-		lab1.setExit("west",c6);
-		lab2.setExit("west",c7);
-		lab3.setExit("west",c8);
-		secretariat.setExit("east",c1);
-		exam.setExit("north",c5);
-		u1.setExit("east",c2);
-		u2.setExit("west",c12);
-		lunchRoom.setExit("east",c9);
-		library.setExit("south",c10);
-		print.setExit("north",c12);
-		foyer.setExit("north", c1);
-		ali.setExit("south",c12);
+		c1.setExit(Language.NORTH_WORD.toString(), c2);
+		c1.setExit(Language.SOUTH_WORD.toString(), foyer);
+		c1.setExit(Language.EAST_WORD.toString(), lecture1);
+		c1.setExit(Language.WEST_WORD.toString(), secretariat);
+		c2.setExit(Language.NORTH_WORD.toString(), c3);
+		c2.setExit(Language.SOUTH_WORD.toString(), c1);
+		c2.setExit(Language.EAST_WORD.toString(), lecture2);
+		c2.setExit(Language.WEST_WORD.toString(), u1);
+		c3.setExit(Language.NORTH_WORD.toString(), c6);
+		c3.setExit(Language.SOUTH_WORD.toString(), c2);
+		c3.setExit(Language.EAST_WORD.toString(), lecture3);
+		c3.setExit(Language.WEST_WORD.toString(), c4);
+		c4.setExit(Language.EAST_WORD.toString(), c3);
+		c4.setExit(Language.WEST_WORD.toString(), c5);
+		c5.setExit(Language.SOUTH_WORD.toString(), exam);
+		c5.setExit(Language.EAST_WORD.toString(), c4);
+		c6.setExit(Language.NORTH_WORD.toString(), c7);
+		c6.setExit(Language.SOUTH_WORD.toString(), c3);
+		c6.setExit(Language.EAST_WORD.toString(), lab1);
+		c7.setExit(Language.NORTH_WORD.toString(), c8);
+		c7.setExit(Language.SOUTH_WORD.toString(), c6);
+		c7.setExit(Language.EAST_WORD.toString(), lab2);
+		c8.setExit(Language.NORTH_WORD.toString(), c9);
+		c8.setExit(Language.SOUTH_WORD.toString(), c7);
+		c8.setExit(Language.EAST_WORD.toString(), lab3);
+		c9.setExit(Language.NORTH_WORD.toString(), c10);
+		c9.setExit(Language.SOUTH_WORD.toString(), c8);
+		c9.setExit(Language.EAST_WORD.toString(), c11);
+		c9.setExit(Language.WEST_WORD.toString(), lunchRoom);
+		c10.setExit(Language.NORTH_WORD.toString(), library);
+		c10.setExit(Language.SOUTH_WORD.toString(), c9);
+		c11.setExit(Language.EAST_WORD.toString(), c12);
+		c11.setExit(Language.WEST_WORD.toString(), c9);
+		c12.setExit(Language.NORTH_WORD.toString(), ali);
+		c12.setExit(Language.SOUTH_WORD.toString(), print);
+		c12.setExit(Language.EAST_WORD.toString(), u2);
+		c12.setExit(Language.WEST_WORD.toString(), c11);
+		lecture1.setExit(Language.WEST_WORD.toString(), c1);
+		lecture2.setExit(Language.WEST_WORD.toString(), c2);
+		lecture3.setExit(Language.WEST_WORD.toString(), c3);
+		lab1.setExit(Language.WEST_WORD.toString(), c6);
+		lab2.setExit(Language.WEST_WORD.toString(), c7);
+		lab3.setExit(Language.WEST_WORD.toString(), c8);
+		secretariat.setExit(Language.EAST_WORD.toString(), c1);
+		exam.setExit(Language.NORTH_WORD.toString(), c5);
+		u1.setExit(Language.EAST_WORD.toString(), c2);
+		u2.setExit(Language.WEST_WORD.toString(), c12);
+		lunchRoom.setExit(Language.EAST_WORD.toString(), c9);
+		library.setExit(Language.SOUTH_WORD.toString(), c10);
+		print.setExit(Language.NORTH_WORD.toString(), c12);
+		foyer.setExit(Language.NORTH_WORD.toString(), c1);
+		ali.setExit(Language.SOUTH_WORD.toString(), c12);
 		currentRoom = foyer;
 	}
 
@@ -140,8 +127,8 @@ public class Game {
 	 * Main play routine. Loops until end of play.
 	 */
 	public void play() {
-		createRooms();
 		whatLanguage();
+		createRooms();
 		printWelcome();
 		// Enter the main command loop. Here we repeatedly read commands and
 		// execute them until the game is over.
@@ -150,19 +137,14 @@ public class Game {
 			String command = parser.getCommand();
 			finished = processCommand(command);
 		}
-		System.out.println("Thank you for playing. Good bye.");
+		System.out.println(Language.EXIT);
 	}
 
 	/**
 	 * Print out the opening message for the player.
 	 */
 	private void printWelcome() {
-		System.out.println();
-		System.out.println("Welcome to the World of Zuul!");
-		System.out
-				.println("World of Zuul is a new, incredibly boring adventure game.");
-		System.out.println("Type \"help\" if you need help.");
-		System.out.println();
+		System.out.println(Language.HELLO);
 		System.out.println(currentRoom.getLongDescription());
 	}
 
@@ -175,53 +157,21 @@ public class Game {
 	 */
 	private boolean processCommand(String command) {
 		boolean wantToQuit = false;
-		switch (command) {
-		case "help":
-			printHelp();
-			break;
-		case "east":
-			goRoom(command);
-			break;
-		case "west":
-			goRoom(command);
-			break;
-		case "north":
-			goRoom(command);
-			break;
-		case "south":
-			goRoom(command);
-			break;
-		case "quit":
-			wantToQuit = quit(command);
-			break;
-		case "stats":
-			printStats();
-			break;
-		case "coffee":
+		if (command.equals(Language.HELP_WORD.toString()))
+			System.out.println(Language.HELP);
+		else if (command.equals(Language.QUIT_WORD.toString()))
+			quit(command);
+		else if (command.equals(Language.COFFEE_WORD.toString()))
 			currentRoom.use(new Coffee(), player);
-			break;
-		case "lights":
+		else if (command.equals(Language.LIGHTS_WORD.toString()))
 			currentRoom.switchLight();
-			break;
-		case "babyfoot":
+		else if (command.equals("babyfoot"))
 			currentRoom.use(new Babyfoot(), player);
-			break;
-		default:
-			System.out.println("I don't know what you mean...");
-			break;
-		}
+		else if (command.equals("stats"))
+			printStats();
+		else
+			goRoom(command);
 		return wantToQuit;
-	}
-
-	// implementations of user commands:
-	/**
-	 * Print out some help information. Here we print some stupid, cryptic
-	 * message and a list of the command words.
-	 */
-	private void printHelp() {
-		System.out.println();
-		System.out.println("Your command words are:");
-		parser.showCommands();
 	}
 
 	/**
@@ -233,21 +183,26 @@ public class Game {
 		// Try to leave current room.
 		Room nextRoom = currentRoom.getExit(direction);
 		if (nextRoom == null) {
-			System.out.println("There is no door!");
+			System.out.println(Language.NODOOR);
 		} else {
 			// if we want to enter the library, we need to check it's open
-			if (nextRoom.getShortDescription().equals("at the library") && !(nextRoom.specialAction(player))) { 
-			    System.out.println("The library is closed. Try again later.");
-			} else if (nextRoom.getShortDescription().equals("in a lecture") || nextRoom.getShortDescription().equals("in a lab")) {
+			if (nextRoom.getShortDescription().equals(
+					Language.IN_THE_LIBRARY.toString())
+					&& !(nextRoom.specialAction(player))) {
+				System.out.println(Language.LIBRARY_CLOSED);
+			} else if (nextRoom.getShortDescription().equals(
+					Language.IN_A_LECTURE.toString())
+					|| nextRoom.getShortDescription().equals(
+							Language.IN_A_LAB.toString())) {
 				boolean choice = nextRoom.specialAction(player);
 				if (choice) {
 					currentRoom = nextRoom;
-					System.out.println(currentRoom.getLongDescription());					
+					System.out.println(currentRoom.getLongDescription());
 					currentRoom.action(player);
 				}
 			} else {
 				currentRoom = nextRoom;
-				System.out.println(currentRoom.getLongDescription());				
+				System.out.println(currentRoom.getLongDescription());
 				currentRoom.action(player);
 			}
 		}
@@ -270,7 +225,7 @@ public class Game {
 	private void printStats() {
 		player.printAllStats();
 	}
-	
+
 	private void whatLanguage() {
 		System.out.println("Language ? EN / FR");
 		String lang = parser.getCommand();
