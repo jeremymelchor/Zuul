@@ -147,9 +147,17 @@ public class Room {
 	public void action(Player player) {
 		/** Nothing */
 	}
-	
-	public boolean isLibraryOpen() {
+
+	/**
+	 * A method that will be defined in classes needing a confirmation to enter the room.
+	 *    >   library (is it open ?)
+	 *    >   lecture & lab (if it's not OOP, would you like to follow it ?)
+	 * @return if yes or no, following the question.
+	 */
+	public boolean specialAction(Player player) {
 		/** Nothing */
 		return false;
 	}
+	
+	
 }

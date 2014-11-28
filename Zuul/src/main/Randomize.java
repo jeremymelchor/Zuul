@@ -106,20 +106,11 @@ public class Randomize {
 	}
 
 	/**
-	 * Determine if a lecture is an OOP lecture or another
+	 * Determine if a lecture/lab is an OOP lecture or another
 	 * 
 	 * @return 0 means not OOP, 1 is OOP and 2 is an empty room
 	 */
-	public int isItAnOOPLecture() {
-		return determineRoomRandomize(rand.nextInt(16), 5);
-	}
-
-	/**
-	 * Determine if a lab is an OOP lab or another
-	 * 
-	 * @return 0 means not OOP, 1 is OOP and 2 is an empty room
-	 */
-	public int isItAnOOPLab() {
+	public int isItOOP() {
 		return determineRoomRandomize(rand.nextInt(16), 5);
 	}
 

@@ -12,5 +12,13 @@ public class Secretariat extends Room {
 		System.out
 				.println("There are people here, they don't seem to acknoledge you. You should probably leave.");
 	}
+	
+	/**
+	 * Here the action is very limited...
+	 */
+	@Override
+	public void action(Player player) {
+		System.out.println("There are people here, they don't seem to acknoledge you. You should probably leave.");
+	}
 
 }
