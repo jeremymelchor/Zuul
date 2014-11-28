@@ -8,7 +8,7 @@ public class Foyer extends Room {
 	private Coffee coffee;
 	
     public Foyer() {
-        super("in the foyer");
+        super(Language.FOYER.toString());
     	coffee = new Coffee();
     	listOfThings.add(coffee);
     }	

@@ -4,7 +4,7 @@ import player.*;
 
 public class Secretariat extends Room {
 	public Secretariat() {
-		super("at the secretariat");
+		super(Language.SECRETARIAT.toString());
 	}
 
 

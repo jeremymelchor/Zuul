@@ -6,7 +6,6 @@ import java.util.Set;
 import java.util.HashMap;
 
 import main.Language;
-import player.*;
 import things.Thing;
 
 /**
@@ -78,7 +77,7 @@ public class Room {
 	 * @return Details of the room's exits.
 	 */
 	private String getExitString() {
-		String returnString = "Exits:";
+		String returnString = Language.EXIT_WORD.toString();
 		Set<String> keys = exits.keySet();
 		for (String exit : keys) {
 			returnString += " " + exit;

@@ -42,12 +42,4 @@ public class Parser
 
         return word1;
     }
-
-    /**
-     * Print out a list of valid command words.
-     */
-    public void showCommands()
-    {
-        System.out.println(Language.HELP);
-    }
 }

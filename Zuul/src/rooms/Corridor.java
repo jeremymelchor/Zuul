@@ -4,7 +4,7 @@ import player.*;
 
 public class Corridor extends Room {
 	public Corridor() {
-		super("in a corridor");
+		super(Language.CORRIDOR.toString());
 	}
 
 	void printDescription() {

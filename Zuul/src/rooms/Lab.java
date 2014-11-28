@@ -8,7 +8,7 @@ public class Lab  extends Room {
 	Randomize random;
 
 	public Lab() {
-		super("in a lab");
+		super(Language.LAB.toString());
 		random = new Randomize();
 	}
 
@@ -30,7 +30,7 @@ public class Lab  extends Room {
 					.println(Language.NOT_OOP_LAB);
 			Parser pa = new Parser();
 			String ans = pa.getCommand();
-			if (ans.equals(Language.YES)) {
+			if (ans.equals(Language.YES_WORD.toString())) {
 				player.lowEnergy(10);
 				System.out.println(Language.FOLLOW_LAB);
 				return true;

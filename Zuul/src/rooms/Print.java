@@ -1,8 +1,8 @@
 package rooms;
-import player.*;
+import main.Language;
 
 public class Print extends Room {
     public Print() {
-        super("in the print room");
+        super(Language.PRINT_ROOM.toString());
     }	
 }

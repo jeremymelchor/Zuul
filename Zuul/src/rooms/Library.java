@@ -6,7 +6,7 @@ public class Library extends Room {
 	private Randomize random;
 	
     public Library() {
-        super("at the library");
+        super(Language.IN_THE_LIBRARY.toString());
         random = new Randomize();
     }	
     

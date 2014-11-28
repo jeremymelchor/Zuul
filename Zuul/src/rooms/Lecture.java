@@ -9,7 +9,7 @@ public class Lecture extends Room {
 	Randomize random;
 
 	public Lecture() {
-		super("in a lecture");
+		super(Language.IN_A_LECTURE.toString());
 		random = new Randomize();
 	}
 
@@ -31,7 +31,7 @@ public class Lecture extends Room {
 					.println(Language.NOT_OOP_COURSE);
 			Parser pa = new Parser();
 			String ans = pa.getCommand();
-			if (ans.equals(Language.YES)) {
+			if (ans.equals(Language.YES_WORD.toString())) {
 				player.lowEnergy(10);
 				System.out.println(Language.FOLLOW_COURSE);
 				return true;
