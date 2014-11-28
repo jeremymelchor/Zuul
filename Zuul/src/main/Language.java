@@ -2,7 +2,46 @@ package main;
 
 public enum Language {
 
-	HELLO(""), DUNNO("");
+	HELLO(""),
+	DUNNO(""),
+	NODOOR(""),
+	LIBRARY_CLOSED(""),
+	HELP(""),
+	UPTODATE(""),
+	LECTURE(""),
+	LAB(""),
+	ENERGY_LEVEL(""),
+	STATS(""),
+	USELESS_ROOM(""),
+	ALI(""),
+	CORRIDOR(""),
+	AMAZING(""),
+	EXAM_ROOM(""),
+	FOYER(""),
+	DRINK(""),
+	LAB_INFO(""),
+	IN_A_LAB(""),
+	AT_THE_LIBRARY(""),
+	FIND_BOOK(""),
+	FIND_TABLETTE(""),
+	LEARN_LECTURE(""),
+	PLAY_WORLD_OF_ZUUL(""),
+	PLAY_VIDEO_GAME(""),
+	LUNCH_ROOM(""),
+	PRINT_ROOM(""),
+	YOU_ARE(""),
+	EXIT(""),
+	NO_USABLE(""),
+	LIGHTS_ON(""),
+	LIGHTS_OFF(""),
+	SECRETARIAT(""),
+	PEOPLE_HERE(""),
+	BABYFOOT(""),
+	COFFE(""),
+	DRINK_COFFE(""),
+	OOP_BOOK(""),
+	OOP_READ("");
+	
 	private String str;
 
 	Language(String str) {
