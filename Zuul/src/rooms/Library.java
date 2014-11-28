@@ -35,7 +35,7 @@ public class Library extends Room {
     }
     
     @Override
-    public boolean isLibraryOpen() {
+    public boolean specialAction(Player player) {
     	return random.isTheLibraryOpen();
     }
 }

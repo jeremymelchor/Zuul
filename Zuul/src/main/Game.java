@@ -236,12 +236,19 @@ public class Game {
 			System.out.println("There is no door!");
 		} else {
 			// if we want to enter the library, we need to check it's open
-			if (nextRoom.getShortDescription().equals("at the library") && !(nextRoom.isLibraryOpen())) { 
+			if (nextRoom.getShortDescription().equals("at the library") && !(nextRoom.specialAction(player))) { 
 			    System.out.println("The library is closed. Try again later.");
+			} else if (nextRoom.getShortDescription().equals("in a lecture") || nextRoom.getShortDescription().equals("in a lab")) {
+				boolean choice = nextRoom.specialAction(player);
+				if (choice) {
+					currentRoom = nextRoom;
+					System.out.println(currentRoom.getLongDescription());					
+					currentRoom.action(player);
+				}
 			} else {
 				currentRoom = nextRoom;
+				System.out.println(currentRoom.getLongDescription());				
 				currentRoom.action(player);
-				System.out.println(currentRoom.getLongDescription());
 			}
 		}
 	}
