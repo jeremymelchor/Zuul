@@ -39,10 +39,15 @@ public class Lecture extends Room {
 				return false;
 			}
 		} else if (choice == 1) { // we are in an OOP class (we must follow it)
-			System.out.println(Language.OOP_COURSE);
-			player.addLecture();
-			player.lowEnergy(10);
-			return true;
+			System.out.println(Language.THIS_IS_OOP_LECTURE);
+			if (player.whatLectureToAttend() != null) {
+				System.out.println(Language.YOU_FOLLOW_IT);
+				player.addLecture();
+				player.lowEnergy(10);			
+			} else {
+				System.out.println(Language.NO_LECTURE_LEFT);
+			}
+			return true;	
 		} else { // the room is empty (we can do whatever we want)
 			System.out.println(Language.EMPTY_ROOM);
 			return true;

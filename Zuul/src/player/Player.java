@@ -1,7 +1,6 @@
 package player;
 
 import java.util.ArrayList;
-import java.util.Random;
 import main.Language;
 import main.Randomize;
 
@@ -68,7 +67,10 @@ public class Player {
 	 * A method adding a lecture. Used when the player follows a lecture.
 	 */
 	public void addLecture() {
-		listLecture.add(whatLectureToAttend());
+		if (whatLectureToAttend() != null) {
+			listLecture.add(whatLectureToAttend());
+		} else {
+		}
 	}
 
 	/**
@@ -78,7 +80,6 @@ public class Player {
 		if (whatLabToAttend() != null) {
 			listLab.add(whatLabToAttend());
 		} else {
-			System.out.println(Language.UPTODATE);
 		}
 	}
 
@@ -94,9 +95,14 @@ public class Player {
 				return missingElt;
 			}
 		}
-		return null; // we should never return null.
+		return null; // returns null if there is no lecture left to attend
 	}
 
+	/**
+	 * A method finding the lab (if there is one) the player should attend.
+	 *
+	 * @return the name of the Lab.
+	 */
 	public String whatLabToAttend() {
 		for (String eltLecture : listLecture) {
 			if (!listLab.contains(eltLecture)) {
@@ -163,4 +169,17 @@ public class Player {
 		}
 		listLecture.remove(chosenElt);
 	}
+	
+	/**
+	 * A method called in the room Exam, to be sure the player can take the exam.
+	 * @return true if the player can take the exam, false otherwise.
+	 */
+	public boolean canTakeTheExam() {
+		if (this.listLab.size() == this.completeList.size() && this.listLecture.size() == this.completeList.size() && this.lvlEnergy >= 70) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
 }

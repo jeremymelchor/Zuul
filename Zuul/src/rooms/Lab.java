@@ -39,13 +39,13 @@ public class Lab extends Room {
 				return false;
 			}
 		} else if (choice == 1) { // we are in an OOP class (we must follow it)
-			System.out.println(Language.OOP_LAB);
+			System.out.println(Language.THIS_IS_OOP_LAB);	
 			if (player.whatLabToAttend() != null) {
-				//System.out.println(Language.FOLLOW_LAB);
+				System.out.println(Language.YOU_FOLLOW_IT);
 				player.addLab();
 				player.lowEnergy(10);
 			} else {
-				player.addLab();
+				System.out.println(Language.LAB_UP_TO_DATE);
 			}
 			return true;
 		} else { // the room is empty (we can do whatever we want)

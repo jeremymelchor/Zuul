@@ -12,7 +12,10 @@ public enum Language {
 			""), NOT_OOP_COURSE(""), FOLLOW_COURSE(""), KICKED_ROOM(""), OOP_COURSE(
 			""), EMPTY_ROOM(""), YES_WORD(""), NOT_OOP_LAB(""), FOLLOW_LAB(""), OOP_LAB(
 			""), MESSY(""), NORTH_WORD(""), SOUTH_WORD(""), EAST_WORD(""), WEST_WORD(
-			""), HELP_WORD(""), QUIT_WORD(""), COFFEE_WORD(""), LIGHTS_WORD("");
+			""), HELP_WORD(""), QUIT_WORD(""), COFFEE_WORD(""), LIGHTS_WORD(""), THIS_IS_OOP_LECTURE(
+			""), THIS_IS_OOP_LAB(""), YOU_FOLLOW_IT(""), NO_LECTURE_LEFT(""), LAB_UP_TO_DATE(
+			""), WELCOME_QUIZ(""), THERE_WILL_BE(""), MUST_ANSWER(""), CORRECT_ANSWER(
+			""), FALSE_ANSWER(""), CONGRATULATIONS(""), GAME_OVER(""), TRUE_WORD(""), FALSE_WORD("");;
 	private String str;
 
 	Language(String str) {
@@ -104,14 +107,36 @@ public enum Language {
 			"Ce n'est pas un TD de POO. Voulez-vous assister au TD ?",
 			"Vous avez suivi le TD. Energie -10",
 			"C'est un TD de POO. Vous le suivez. Vous avez appris un nouveau TD ! Energie -10",
-			"Wow ! C'est le bordel ici ! Vous feriez mieux de partir !", "nord",
-			"sud", "est", "ouest", "aide", "quitter", "café", "lumière" };
+			"Wow ! C'est le bordel ici ! Vous feriez mieux de partir !",
+			"nord",
+			"sud",
+			"est",
+			"ouest",
+			"aide",
+			"quitter",
+			"café",
+			"lumière",
+			"C'est un cours de POO.",
+			"C'est un TD de POO",
+			"Vous le suivez. Energie -10",
+			"Il semblerait que vous n'ayez plus rien à apprendre. Passez l'examen si vous vous en sentez capable.",
+			"Vos TD sont à jour. Vous devriez suivre un nouveau cours.",
+			"Voici l'examen final, qui déterminera si vous avez le niveau requis en POO. Vous n'avez qu'une seule chance.",
+			"Il y aura ",
+			" questions, vous devez répondre par \"vrai\" ou \"faux\".",
+			"Correct. Votre score : ",
+			"Faux. Votre score : ",
+			"Félicitations ! Vous avez gagné le jeu !",
+			"Eeeew. Vous avez échoué... ;(",
+			"vrai",
+			"faux"
+	};
 	private final static String[] en = {
 			"\nWelcome to the World of Zuul!\n"
 					+ "World of Zuul is a new, incredibly not boring adventure game.\n"
 					+ "Type \"help\" if you need help.\n",
 			"Thank you for playing. Good bye.",
-			"\nVos Possible actions : \n"
+			"\nThings you can do : \n"
 					+ "movements: north / south / east / west \n"
 					+ "actions: quit / help / stats \n"
 					+ "objets: coffee / light / babyfoot\n",
@@ -162,6 +187,28 @@ public enum Language {
 			"This is not an OOP lab. Would you like to follow it ?",
 			"You followed the lab. Energy -10",
 			"This is an OOP lab. You follow it. You learned a new labs. Energy -10",
-			"Wow ! It's messy here ! You better get out of here !", "north",
-			"south", "east", "west", "help", "quit", "coffee", "light" };
+			"Wow ! It's messy here ! You better get out of here !",
+			"north",
+			"south",
+			"east",
+			"west",
+			"help",
+			"quit",
+			"coffee",
+			"light",
+			"This is an OOP lecture",
+			"This is an OOP lab.",
+			"You follow it. Energy -10",
+			"It seems like you have nothing new to learn. You should take the exam, if you're brave enough...",
+			"Your labs are up to date. You should attend a new lecture.",
+			"Welcome to this quiz, which will determine whether or not you are worthy of this course.",
+			"There will be ",
+			" questions, you must answer \"true\" or \"false\".",
+			"Correct. Your score : ",
+			"False. Your score : ",
+			"Congratulations !! You won !",
+			"Eeewww. Game over ! ;( Try again later!",
+			"true",
+			"false"
+	};
 }
