@@ -181,5 +181,17 @@ public class Player {
 			return false;
 		}
 	}
+
+	/**
+	 * A method adding to the player's list of lectures every lectures he doesn't have yet.
+	 * This method will be called only if the player finds the POO book in the library.
+	 */
+	public void addAllLecture() {
+		for (String elt : completeList) {
+			if (!listLecture.contains(elt)) {
+				listLecture.add(elt);
+			}
+		}
+	}
 	
 }

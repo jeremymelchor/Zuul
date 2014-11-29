@@ -1,5 +1,6 @@
 package things;
 
+import main.Language;
 import player.Player;
 
 public class PooBook extends Thing {
@@ -12,7 +13,8 @@ public class PooBook extends Thing {
 	 */
 	@Override
 	public void use(Player player) {
-		//player.addLecture();
-		System.out.println("You just read a POO book !");
+		player.addAllLecture();
+		System.out
+				.println(Language.POO_BOOK);
 	}
 }
