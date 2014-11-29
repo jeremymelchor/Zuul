@@ -15,7 +15,8 @@ public enum Language {
 			""), HELP_WORD(""), QUIT_WORD(""), COFFEE_WORD(""), LIGHTS_WORD(""), THIS_IS_OOP_LECTURE(
 			""), THIS_IS_OOP_LAB(""), YOU_FOLLOW_IT(""), NO_LECTURE_LEFT(""), LAB_UP_TO_DATE(
 			""), WELCOME_QUIZ(""), THERE_WILL_BE(""), MUST_ANSWER(""), CORRECT_ANSWER(
-			""), FALSE_ANSWER(""), CONGRATULATIONS(""), GAME_OVER(""), TRUE_WORD(""), FALSE_WORD(""), POO_BOOK(""), CANT_TAKE_EXAM(""),;
+			""), FALSE_ANSWER(""), CONGRATULATIONS(""), GAME_OVER(""), TRUE_WORD(""), FALSE_WORD(""), POO_BOOK(""), CANT_TAKE_EXAM(""),
+			DESIGNING_CLASSES(""), INHERITANCE(""), POLYMORPHISM(""), ABSTRACTION(""), INTERFACE(""), ERRORS(""), DEBUG("")  ;
 	private String str;
 
 	Language(String str) {
@@ -131,7 +132,14 @@ public enum Language {
 			"vrai",
 			"faux",
 			"Vous venez de trouver le livre : Objects First with Java. En le lisant, vous avez appris tout ce que vous deviez savoir sur la POO. Vous n'avez plus besoin d'assister à aucun cours ! Mais vous devez tout de même assister aux TD.",
-			"Vous ne pouvez pas encore passer l'examen !"
+			"Vous ne pouvez pas encore passer l'examen !",
+			"Organiser les classes",
+			"Héritage",
+			"Polymorphisme",
+			"Abstraction",
+			"Interface",
+			"Gestion des erreurs",
+			"Debugage"
 	};
 	private final static String[] en = {
 			"\nWelcome to the World of Zuul!\n"
@@ -213,6 +221,13 @@ public enum Language {
 			"true",
 			"false",
 			"You just found the book : Objects First with Java. When reading it, you learned every thing you needed to know ajout POO. You don't need to attend any lecture now. But you must still go to lab classes!",
-	        "You can't take the exam yet !"
+	        "You can't take the exam yet !",
+	        "Designing classes",
+	        "Inheritance",
+	        "Polymorphism",
+	        "Abstraction",
+	        "Interface",
+	        "Errors",
+	        "Debug"
 	};
 }

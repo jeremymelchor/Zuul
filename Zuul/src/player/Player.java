@@ -1,6 +1,7 @@
 package player;
 
 import java.util.ArrayList;
+
 import main.Language;
 import main.Randomize;
 
@@ -56,8 +57,18 @@ public class Player {
 	 * filled by the user of the application.
 	 */
 	void initialize() {
+		
+		/**
 		String[] tab = { "POO 1", "POO 2", "POO 3", "POO 4", "POO 5", "POO 6",
 				"POO 7", "POO 8", "POO 9", "POO 10" };
+		*/
+		
+		String[] tab = { Language.DESIGNING_CLASSES.toString(),
+				Language.INHERITANCE.toString(),
+				Language.POLYMORPHISM.toString(),
+				Language.ABSTRACTION.toString(), Language.INTERFACE.toString(),
+				Language.ERRORS.toString(), Language.DEBUG.toString() };
+		
 		for (String el : tab) {
 			completeList.add(el);
 		}
@@ -169,13 +180,17 @@ public class Player {
 			listLecture.remove(chosenElt);
 		}
 	}
-	
+
 	/**
-	 * A method called in the room Exam, to be sure the player can take the exam.
+	 * A method called in the room Exam, to be sure the player can take the
+	 * exam.
+	 * 
 	 * @return true if the player can take the exam, false otherwise.
 	 */
 	public boolean canTakeTheExam() {
-		if (this.listLab.size() == this.completeList.size() && this.listLecture.size() == this.completeList.size() && this.lvlEnergy >= 70) {
+		if (this.listLab.size() == this.completeList.size()
+				&& this.listLecture.size() == this.completeList.size()
+				&& this.lvlEnergy >= 70) {
 			return true;
 		} else {
 			return false;
@@ -183,8 +198,9 @@ public class Player {
 	}
 
 	/**
-	 * A method adding to the player's list of lectures every lectures he doesn't have yet.
-	 * This method will be called only if the player finds the POO book in the library.
+	 * A method adding to the player's list of lectures every lectures he
+	 * doesn't have yet. This method will be called only if the player finds the
+	 * POO book in the library.
 	 */
 	public void addAllLecture() {
 		for (String elt : completeList) {
@@ -193,5 +209,5 @@ public class Player {
 			}
 		}
 	}
-	
+
 }
