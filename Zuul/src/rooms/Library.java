@@ -16,8 +16,9 @@ public class Library extends Room {
     public void action(Player player) {
     	// first, the book.
     	if (random.creatingTheCheatBook()) {
-    		player.addLecture();
-    		System.out.println(Language.FIND_BOOK);
+    		player.addAllLecture();
+    		System.out
+    				.println(Language.POO_BOOK);
     	} 
     	// now, about the tablet.
     	System.out.print(Language.FIND_TABLETTE);
@@ -29,7 +30,7 @@ public class Library extends Room {
     		System.out.println(Language.PLAY_WORLD_OF_ZUUL);
     	} else {
     		System.out.println(Language.PLAY_VIDEO_GAME);
-    		// here player.forgetOneRandomLecture();
+    		player.forgetOneRandomLecture();
     	}
     }
     

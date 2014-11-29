@@ -160,14 +160,14 @@ public class Player {
 
 	public void forgetOneRandomLecture() {
 		Randomize random = new Randomize();
-		int chosenRank = random.getRandomBetween0and(listLecture.size());
-		System.out.println(chosenRank);
-		String chosenElt = listLecture.get(chosenRank);
-		System.out.println(chosenElt);
-		if (listLab.contains(chosenElt)) {
-			listLab.remove(chosenElt);
+		if (listLecture.size() > 0) {
+			int chosenRank = random.getRandomBetween0and(listLecture.size());
+			String chosenElt = listLecture.get(chosenRank);
+			if (listLab.contains(chosenElt)) {
+				listLab.remove(chosenElt);
+			}
+			listLecture.remove(chosenElt);
 		}
-		listLecture.remove(chosenElt);
 	}
 	
 	/**
