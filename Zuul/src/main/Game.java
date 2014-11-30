@@ -10,8 +10,9 @@ public class Game {
 	private Parser parser;
 
 	public Game() throws InterruptedException {
-		player = new Player();
 		parser = new Parser();
+		whatLanguage();		
+		player = new Player();		
 	}
 
 	/**
@@ -127,7 +128,7 @@ public class Game {
 	 * Main play routine. Loops until end of play.
 	 */
 	public void play() {
-		whatLanguage();
+		
 		createRooms();
 		printWelcome();
 		// Enter the main command loop. Here we repeatedly read commands and
@@ -221,7 +222,7 @@ public class Game {
 		player.printAllStats();
 	}
 
-	private void whatLanguage() {
+	public void whatLanguage() {
 		System.out.println("Language ? EN / FR");
 		String lang = parser.getCommand();
 		Language.setLanguage(lang);
