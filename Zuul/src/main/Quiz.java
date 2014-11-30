@@ -1,6 +1,7 @@
 package main;
 
 import java.util.ArrayList;
+import player.Player;
 
 /**
  * Class Quiz - a quiz to know if you master POO enough.
@@ -28,16 +29,19 @@ public class Quiz {
     	score = 0;
     	initialization();    	
     	printIntroduction();
-    	// every questions
-    	for (int i=1; i<=numberOfQuestions; i++) {
-            printQuestion(i); 
-            System.out.print(Language.YOUR_ANSWER);
-            String answer = parser.getCommand();
-            checkAnswer(i,answer);
-        }
-    	endOfGame();
+	    // every questions
+	    for (int i=1; i<=numberOfQuestions; i++) {
+	        printQuestion(i); 
+	        System.out.print(Language.YOUR_ANSWER);
+	        String answer = parser.getCommand();
+	        checkAnswer(i,answer);
+	    }
+	    endOfGame();
     }
 	
+
+    
+    
 	/**
 	 * Creates the questions and answers.
 	 */

@@ -16,7 +16,7 @@ public enum Language {
 			""), THIS_IS_OOP_LAB(""), YOU_FOLLOW_IT(""), NO_LECTURE_LEFT(""), LAB_UP_TO_DATE(
 			""), WELCOME_QUIZ(""), THERE_WILL_BE(""), MUST_ANSWER(""), CORRECT_ANSWER(
 			""), FALSE_ANSWER(""), CONGRATULATIONS(""), GAME_OVER(""), TRUE_WORD(
-			""), FALSE_WORD(""), POO_BOOK(""), CANT_TAKE_EXAM(""), YOUR_ANSWER(""), DESIGNING_CLASSES(
+			""), FALSE_WORD(""), POO_BOOK(""), CANT_TAKE_EXAM(""), YOUR_ANSWER(""), CHEAT(""), FOUND_CHEAT("") , DESIGNING_CLASSES(
 			""), INHERITANCE(""), POLYMORPHISM(""), ABSTRACTION(""), INTERFACE(
 			""), ERRORS(""), DEBUG(""), QUESTION_1(""), QUESTION_2(""), QUESTION_3(
 			""), QUESTION_4(""), QUESTION_5("");
@@ -137,6 +137,8 @@ public enum Language {
 			"Vous venez de trouver le livre : Objects First with Java. En le lisant, vous avez appris tout ce que vous deviez savoir sur la POO. Vous n'avez plus besoin d'assister à aucun cours ! Mais vous devez tout de même assister aux TD.",
 			"Vous ne pouvez pas encore passer l'examen !",
 			"Votre réponse ",
+			"Vous aviez trouvé la feuille de triche, vous avez donc sournoisement triché à l'examen. \nVous avez réussi haut la main ! \nVous avez terminé le jeu ! Félicitations ! ",
+			"Vous avez trouvé une feuille de triche. C'est la correction de l'examen de POO ! Vous êtes donc sûr de passer l'examen !",
 			"Organiser les classes",
 			"Héritage",
 			"Polymorphisme",
@@ -231,6 +233,8 @@ public enum Language {
 			"You just found the book : Objects First with Java. When reading it, you learned every thing you needed to know ajout POO. You don't need to attend any lecture now. But you must still go to lab classes!",
 			"You can't take the exam yet !",
 			"Your answer ",
+			"You found the cheat sheet, and you used it during the exam. \nYou passed the test. \nYou won the game. Congratulations !",
+			"You finds a cheat sheet. It's the correction of the OOP exam ! You should pass the test, you are sure to know all the answers !",
 			"Designing classes",
 			"Inheritance",
 			"Polymorphism",

@@ -9,11 +9,13 @@ public class Player {
 	/**
 	 * The player starts with 100 points of energy. Every actions will change
 	 * this level (drinking coffee, attending lectures...).
+	 * theCheatSheet is a variable which, when 'true', makes you know the answers to every questions of the exam.
 	 */
 	public int lvlEnergy = 100;
 	private ArrayList<String> completeList = new ArrayList<String>();
 	private ArrayList<String> listLecture = new ArrayList<String>();
 	private ArrayList<String> listLab = new ArrayList<String>();
+	private boolean theCheatSheet = false;
 
 	public Player() {
 		initialize();
@@ -26,6 +28,25 @@ public class Player {
 	 */
 	public int getLvlEnergy() {
 		return lvlEnergy;
+	}
+
+
+
+	/**
+	 * A method called when the player enters the print room and finds the cheat
+	 * sheet on a printer (probably forgotten by a teacher.)
+	 */
+	public void setTheCheatSheet(boolean cheat) {
+		this.theCheatSheet = cheat;
+	}
+
+	
+	/**
+	 * A method returning theCheatSheet.
+	 * @return the value of theCheatSheet
+	 */
+	public boolean getTheCheatSheet(){
+		return this.theCheatSheet;
 	}
 
 	/**
@@ -57,18 +78,18 @@ public class Player {
 	 * filled by the user of the application.
 	 */
 	void initialize() {
-		
+
 		/**
-		String[] tab = { "POO 1", "POO 2", "POO 3", "POO 4", "POO 5", "POO 6",
-				"POO 7", "POO 8", "POO 9", "POO 10" };
-		*/
-		
+		 * String[] tab = { "POO 1", "POO 2", "POO 3", "POO 4", "POO 5",
+		 * "POO 6", "POO 7", "POO 8", "POO 9", "POO 10" };
+		 */
+
 		String[] tab = { Language.DESIGNING_CLASSES.toString(),
 				Language.INHERITANCE.toString(),
 				Language.POLYMORPHISM.toString(),
 				Language.ABSTRACTION.toString(), Language.INTERFACE.toString(),
 				Language.ERRORS.toString(), Language.DEBUG.toString() };
-		
+
 		for (String el : tab) {
 			completeList.add(el);
 		}
