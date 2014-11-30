@@ -16,9 +16,10 @@ public enum Language {
 			""), THIS_IS_OOP_LAB(""), YOU_FOLLOW_IT(""), NO_LECTURE_LEFT(""), LAB_UP_TO_DATE(
 			""), WELCOME_QUIZ(""), THERE_WILL_BE(""), MUST_ANSWER(""), CORRECT_ANSWER(
 			""), FALSE_ANSWER(""), CONGRATULATIONS(""), GAME_OVER(""), TRUE_WORD(
-			""), FALSE_WORD(""), POO_BOOK(""), CANT_TAKE_EXAM(""), DESIGNING_CLASSES(
+			""), FALSE_WORD(""), POO_BOOK(""), CANT_TAKE_EXAM(""), YOUR_ANSWER(""), DESIGNING_CLASSES(
 			""), INHERITANCE(""), POLYMORPHISM(""), ABSTRACTION(""), INTERFACE(
-			""), ERRORS(""), DEBUG("");
+			""), ERRORS(""), DEBUG(""), QUESTION_1(""), QUESTION_2(""), QUESTION_3(
+			""), QUESTION_4(""), QUESTION_5("");
 	private String str;
 
 	Language(String str) {
@@ -135,8 +136,19 @@ public enum Language {
 			"faux",
 			"Vous venez de trouver le livre : Objects First with Java. En le lisant, vous avez appris tout ce que vous deviez savoir sur la POO. Vous n'avez plus besoin d'assister à aucun cours ! Mais vous devez tout de même assister aux TD.",
 			"Vous ne pouvez pas encore passer l'examen !",
-			"Organiser les classes", "Héritage", "Polymorphisme",
-			"Abstraction", "Interface", "Gestion des erreurs", "Debugage" };
+			"Votre réponse ",
+			"Organiser les classes",
+			"Héritage",
+			"Polymorphisme",
+			"Abstraction",
+			"Interface",
+			"Gestion des erreurs",
+			"Debugage",
+			"Si vous voulez comparer deux chaines de caractères s1 et s2, vous pouvez très bien utiliser : s1 == s2.",
+			"Dans : \nclass Goalkeeper extends Player {...}\nC'est Player qui hérite de Goalkeeper.",
+			"Dans : \nPlayer player; \nGoalkeeper goal = new Goalkeeper(); \nL'expression player = goal va compiler.",
+			"Les classes abstraites ne peuvent pas être instanciées.",
+			"Dans une interface, vous devez définir comme \"abstract\" toutes les méthodes." };
 	private final static String[] en = {
 			"\nWelcome to the World of Zuul!\n"
 					+ "World of Zuul is a new, incredibly not boring adventure game.\n"
@@ -217,7 +229,18 @@ public enum Language {
 			"true",
 			"false",
 			"You just found the book : Objects First with Java. When reading it, you learned every thing you needed to know ajout POO. You don't need to attend any lecture now. But you must still go to lab classes!",
-			"You can't take the exam yet !", "Designing classes",
-			"Inheritance", "Polymorphism", "Abstraction", "Interface",
-			"Errors", "Debug" };
+			"You can't take the exam yet !",
+			"Your answer ",
+			"Designing classes",
+			"Inheritance",
+			"Polymorphism",
+			"Abstraction",
+			"Interface",
+			"Errors",
+			"Debug",
+			"If you want to compare two strings s1 and s2, you can use : s1 == s2.",
+			"In : \nclass Goalkeeper extends Player {...}\nPlayer inherits Goalkeeper.",
+			"In : \nPlayer player; \nGoalkeeper goal = new Goalkeeper(); \nThe expression player = goal compiles.",
+			"Abstract classes cannot be instantiated.",
+			"In an interface, you must define as \"abstract\" every methods." };
 }

@@ -31,7 +31,7 @@ public class Quiz {
     	// every questions
     	for (int i=1; i<=numberOfQuestions; i++) {
             printQuestion(i); 
-            System.out.print("Your answer : ");
+            System.out.print(Language.YOUR_ANSWER);
             String answer = parser.getCommand();
             checkAnswer(i,answer);
         }
@@ -43,14 +43,20 @@ public class Quiz {
 	 */
     public void initialization() {    
     	// QUESTION 1
-        questions.add("répondre vrai");
-        reponses.add("vrai");
+        questions.add(Language.QUESTION_1.toString());
+        reponses.add(Language.FALSE_WORD.toString());
         // QUESTION 2
-        questions.add("répondre faux");          
-        reponses.add("faux");        
+        questions.add(Language.QUESTION_2.toString());          
+        reponses.add(Language.FALSE_WORD.toString());        
         // QUESTION 3
-        questions.add("répondre vrai");          
-        reponses.add("vrai"); 
+        questions.add(Language.QUESTION_3.toString());          
+        reponses.add(Language.TRUE_WORD.toString()); 
+        // QUESTION 4
+        questions.add(Language.QUESTION_4.toString());          
+        reponses.add(Language.TRUE_WORD.toString()); 
+        // QUESTION 5
+        questions.add(Language.QUESTION_5.toString());          
+        reponses.add(Language.FALSE_WORD.toString()); 
         
         numberOfQuestions = questions.size(); // if there are 2 questions, numberOfQuestions = 2
     }
@@ -72,7 +78,7 @@ public class Quiz {
      *           The number of the question we need to write (and the answers).
      */
     void printQuestion(int numQuestion) {
-        System.out.print("Question "+numQuestion+" : ");    	
+        System.out.print("\nQuestion "+numQuestion+" : ");    	
         numQuestion--; /* ArrayList starts with index 0 */
         System.out.println(questions.get(numQuestion));
     }

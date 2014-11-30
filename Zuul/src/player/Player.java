@@ -138,7 +138,7 @@ public class Player {
 	public void printCurrentLecture() {
 		System.out.println(Language.LECTURE);
 		for (String el : listLecture) {
-			System.out.println(el);
+			System.out.println("    " + el);
 		}
 	}
 
@@ -148,7 +148,7 @@ public class Player {
 	public void printCurrentLab() {
 		System.out.println(Language.LAB);
 		for (String el : listLab) {
-			System.out.println(el);
+			System.out.println("    " + el);
 		}
 	}
 

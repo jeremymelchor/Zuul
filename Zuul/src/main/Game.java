@@ -12,7 +12,7 @@ public class Game {
 	public Game() throws InterruptedException {
 		parser = new Parser();
 		whatLanguage();		
-		player = new Player();		
+		player = new Player();	
 	}
 
 	/**
