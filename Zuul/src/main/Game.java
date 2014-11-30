@@ -120,6 +120,10 @@ public class Game {
 		currentRoom = foyer;
 	}
 
+	/**
+	 * A method returning the player.
+	 * @return this.player.
+	 */
 	public Player getPlayer() {
 		return player;
 	}
@@ -127,14 +131,14 @@ public class Game {
 	/**
 	 * Main play routine. Loops until end of play.
 	 */
-	public void play() {
-		
+	public void play() {	
 		createRooms();
 		printWelcome();
 		// Enter the main command loop. Here we repeatedly read commands and
 		// execute them until the game is over.
 		boolean finished = false;
 		while (!finished) {
+			this.player.verficationEnergy();
 			String command = parser.getCommand();
 			finished = processCommand(command);
 		}
@@ -222,6 +226,7 @@ public class Game {
 		player.printAllStats();
 	}
 
+	
 	public void whatLanguage() {
 		System.out.println("Language ? EN / FR");
 		String lang = parser.getCommand();

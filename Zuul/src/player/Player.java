@@ -30,7 +30,7 @@ public class Player {
 		return lvlEnergy;
 	}
 
-
+	
 
 	/**
 	 * A method called when the player enters the print room and finds the cheat
@@ -49,6 +49,19 @@ public class Player {
 		return this.theCheatSheet;
 	}
 
+	
+	/**
+	 * A method checking every time if the player has a low energy, or worse, if he can't continue the game.
+	 */
+	public void verficationEnergy() {
+		if (this.lvlEnergy == 0) {
+			System.out.println(Language.DEAD);
+			System.exit(0);
+		} else if (this.lvlEnergy <= 30) {
+			System.out.println(Language.ALMOST_DEAD);
+		}
+	}
+	
 	/**
 	 * A method lowering the level of energy. The lowest possible level is 0.
 	 *
@@ -190,6 +203,9 @@ public class Player {
 		printCurrentLab();
 	}
 
+	/**
+	 * A method making the player forget a lecture. Is used when the player plays video games.
+	 */
 	public void forgetOneRandomLecture() {
 		Randomize random = new Randomize();
 		if (listLecture.size() > 0) {

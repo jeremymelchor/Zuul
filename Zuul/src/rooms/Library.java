@@ -11,7 +11,11 @@ public class Library extends Room {
     }	
     
 
-    
+    /**
+     * in the library you can :
+     * 1. find the book Objects first with Java, making you instantly know every lectures.
+     * 2. find a tablet in which you will either player a video game, or see an on-line course.
+     */
     @Override
     public void action(Player player) {
     	// first, the book.
@@ -34,6 +38,10 @@ public class Library extends Room {
     	}
     }
     
+    
+    /**
+     * A method checking if the library is open (because if it's not, you can't enter the room...)
+     */
     @Override
     public boolean specialAction(Player player) {
     	return random.isTheLibraryOpen();

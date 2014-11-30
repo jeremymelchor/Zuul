@@ -16,7 +16,7 @@ public enum Language {
 			""), THIS_IS_OOP_LAB(""), YOU_FOLLOW_IT(""), NO_LECTURE_LEFT(""), LAB_UP_TO_DATE(
 			""), WELCOME_QUIZ(""), THERE_WILL_BE(""), MUST_ANSWER(""), CORRECT_ANSWER(
 			""), FALSE_ANSWER(""), CONGRATULATIONS(""), GAME_OVER(""), TRUE_WORD(
-			""), FALSE_WORD(""), POO_BOOK(""), CANT_TAKE_EXAM(""), YOUR_ANSWER(""), CHEAT(""), FOUND_CHEAT("") , DESIGNING_CLASSES(
+			""), FALSE_WORD(""), POO_BOOK(""), CANT_TAKE_EXAM(""), YOUR_ANSWER(""), CHEAT(""), FOUND_CHEAT(""), DEAD(""), ALMOST_DEAD(""), DESIGNING_CLASSES(
 			""), INHERITANCE(""), POLYMORPHISM(""), ABSTRACTION(""), INTERFACE(
 			""), ERRORS(""), DEBUG(""), QUESTION_1(""), QUESTION_2(""), QUESTION_3(
 			""), QUESTION_4(""), QUESTION_5("");
@@ -139,6 +139,8 @@ public enum Language {
 			"Votre réponse ",
 			"Vous aviez trouvé la feuille de triche, vous avez donc sournoisement triché à l'examen. \nVous avez réussi haut la main ! \nVous avez terminé le jeu ! Félicitations ! ",
 			"Vous avez trouvé une feuille de triche. C'est la correction de l'examen de POO ! Vous êtes donc sûr de passer l'examen !",
+			"Vous n'avez plus d'énergie... VOUS ETES MORT.",
+			"Faites attention ! Votre niveau d'énergie est bas !",
 			"Organiser les classes",
 			"Héritage",
 			"Polymorphisme",
@@ -235,6 +237,8 @@ public enum Language {
 			"Your answer ",
 			"You found the cheat sheet, and you used it during the exam. \nYou passed the test. \nYou won the game. Congratulations !",
 			"You finds a cheat sheet. It's the correction of the OOP exam ! You should pass the test, you are sure to know all the answers !",
+			"You can't move... YOU DIED",
+			"Be careful ! You energy level is low :",
 			"Designing classes",
 			"Inheritance",
 			"Polymorphism",

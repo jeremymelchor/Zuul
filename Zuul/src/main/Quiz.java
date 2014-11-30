@@ -39,9 +39,6 @@ public class Quiz {
 	    endOfGame();
     }
 	
-
-    
-    
 	/**
 	 * Creates the questions and answers.
 	 */
@@ -115,12 +112,19 @@ public class Quiz {
         } else {
             printGameOver();
         }
+        System.exit(0);
     }
     
+    /**
+     * A method printing congratulations, because the player won the game.
+     */
 	void printCongratulations() {
 	    System.out.println(Language.CONGRATULATIONS);
 	}
 	
+	/**
+	 * A method printing a message like "game over" because he failed the test.
+	 */
 	void printGameOver() {
 	    System.out.println(Language.GAME_OVER);	    
 	}	

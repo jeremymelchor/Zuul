@@ -7,6 +7,9 @@ public class LunchRoom extends Room {
 	private Coffee coffee;
 	private Babyfoot babyfoot;
 	
+	/**
+	 * In the lunch room, you can drink coffee and play babyfoot.
+	 */
     public LunchRoom() {
         super(Language.LUNCH_ROOM.toString());
     	coffee = new Coffee();
