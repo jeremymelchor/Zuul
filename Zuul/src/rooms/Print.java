@@ -4,6 +4,11 @@ import player.Player;
 import main.Language;
 import main.Randomize;
 
+/**
+ * @author Lisa Joanno & Jérémy Melchor
+ * 
+ *         Create the print room with an action associate to it
+ */
 public class Print extends Room {
 	private Randomize random;
 

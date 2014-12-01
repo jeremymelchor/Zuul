@@ -5,6 +5,11 @@ import main.Parser;
 import main.Randomize;
 import player.*;
 
+/**
+ * @author Lisa Joanno & Jérémy Melchor
+ * 
+ *         Create the Lab room with some actions associate to it
+ */
 public class Lab extends Room {
 	Randomize random;
 
@@ -39,7 +44,7 @@ public class Lab extends Room {
 				return false;
 			}
 		} else if (choice == 1) { // we are in an OOP class (we must follow it)
-			System.out.println(Language.THIS_IS_OOP_LAB);	
+			System.out.println(Language.THIS_IS_OOP_LAB);
 			if (player.whatLabToAttend() != null) {
 				System.out.println(Language.YOU_FOLLOW_IT);
 				player.addLab();

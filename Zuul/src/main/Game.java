@@ -4,6 +4,11 @@ import rooms.*;
 import player.*;
 import things.*;
 
+/**
+ * @author Lisa Joanno & Jérémy Melchor
+ * 
+ *         Game.java allows to make the game works
+ */
 public class Game {
 	Room currentRoom;
 	public Player player;
@@ -11,8 +16,8 @@ public class Game {
 
 	public Game() throws InterruptedException {
 		parser = new Parser();
-		whatLanguage();		
-		player = new Player();	
+		whatLanguage();
+		player = new Player();
 	}
 
 	/**
@@ -122,6 +127,7 @@ public class Game {
 
 	/**
 	 * A method returning the player.
+	 * 
 	 * @return this.player.
 	 */
 	public Player getPlayer() {
@@ -131,7 +137,7 @@ public class Game {
 	/**
 	 * Main play routine. Loops until end of play.
 	 */
-	public void play() {	
+	public void play() {
 		createRooms();
 		printWelcome();
 		// Enter the main command loop. Here we repeatedly read commands and
@@ -191,13 +197,18 @@ public class Game {
 			System.out.println(Language.NODOOR);
 		} else {
 			// if we want to enter the library, we need to check it's open
-			if (nextRoom.getShortDescription().equals(Language.IN_THE_LIBRARY.toString()) && !(nextRoom.specialAction(player))) {
+			if (nextRoom.getShortDescription().equals(
+					Language.IN_THE_LIBRARY.toString())
+					&& !(nextRoom.specialAction(player))) {
 				System.out.println(Language.LIBRARY_CLOSED);
-			} else if (nextRoom.getShortDescription().equals(Language.IN_A_LECTURE.toString()) || nextRoom.getShortDescription().equals(Language.IN_A_LAB.toString())) {				
+			} else if (nextRoom.getShortDescription().equals(
+					Language.IN_A_LECTURE.toString())
+					|| nextRoom.getShortDescription().equals(
+							Language.IN_A_LAB.toString())) {
 				System.out.println(nextRoom.getLongDescription());
 				boolean choice = nextRoom.specialAction(player);
 				if (choice) {
-					currentRoom = nextRoom;			
+					currentRoom = nextRoom;
 					currentRoom.action(player);
 				}
 			} else {
@@ -226,7 +237,9 @@ public class Game {
 		player.printAllStats();
 	}
 
-	
+	/**
+	 * A method asking the user the game's language
+	 */
 	public void whatLanguage() {
 		System.out.println("Language ? EN / FR");
 		String lang = parser.getCommand();

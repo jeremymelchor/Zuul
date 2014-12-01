@@ -5,6 +5,11 @@ import main.Parser;
 import main.Randomize;
 import player.*;
 
+/**
+ * @author Lisa Joanno & Jérémy Melchor
+ * 
+ *         Create the Lecture room with some actions associate to it
+ */
 public class Lecture extends Room {
 	Randomize random;
 
@@ -43,11 +48,11 @@ public class Lecture extends Room {
 			if (player.whatLectureToAttend() != null) {
 				System.out.println(Language.YOU_FOLLOW_IT);
 				player.addLecture();
-				player.lowEnergy(10);			
+				player.lowEnergy(10);
 			} else {
 				System.out.println(Language.NO_LECTURE_LEFT);
 			}
-			return true;	
+			return true;
 		} else { // the room is empty (we can do whatever we want)
 			System.out.println(Language.EMPTY_ROOM);
 			return true;

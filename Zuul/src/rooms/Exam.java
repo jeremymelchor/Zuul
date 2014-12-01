@@ -4,6 +4,11 @@ import player.Player;
 import main.Language;
 import main.Quiz;
 
+/**
+ * @author Lisa Joanno & Jérémy Melchor
+ * 
+ *         Create the exam room with an action associate to it
+ */
 public class Exam extends Room {
 	public Exam() {
 		super(Language.EXAM_ROOM.toString());
@@ -12,7 +17,8 @@ public class Exam extends Room {
 	/**
 	 * When the player enters this room, first, we check that he hasn't found
 	 * the cheat sheet, then, we check that he is qualified enough and has
-	 * enough energy to pass the exam. If all the conditions are here, we create the exam.
+	 * enough energy to pass the exam. If all the conditions are here, we create
+	 * the exam.
 	 */
 	@Override
 	public void action(Player player) {

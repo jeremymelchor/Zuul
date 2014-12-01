@@ -5,11 +5,19 @@ import java.util.ArrayList;
 import main.Language;
 import main.Randomize;
 
+/**
+ * @author Lisa Joanno & Jérémy Melchor
+ * 
+ *         All the informations about the player : his courses, labs, if he has
+ *         the cheat sheet. There's also some methods to modify his energy or
+ *         add some courses or labs
+ */
 public class Player {
 	/**
 	 * The player starts with 100 points of energy. Every actions will change
-	 * this level (drinking coffee, attending lectures...).
-	 * theCheatSheet is a variable which, when 'true', makes you know the answers to every questions of the exam.
+	 * this level (drinking coffee, attending lectures...). theCheatSheet is a
+	 * variable which, when 'true', makes you know the answers to every
+	 * questions of the exam.
 	 */
 	public int lvlEnergy = 100;
 	private ArrayList<String> completeList = new ArrayList<String>();
@@ -30,8 +38,6 @@ public class Player {
 		return lvlEnergy;
 	}
 
-	
-
 	/**
 	 * A method called when the player enters the print room and finds the cheat
 	 * sheet on a printer (probably forgotten by a teacher.)
@@ -40,18 +46,18 @@ public class Player {
 		this.theCheatSheet = cheat;
 	}
 
-	
 	/**
 	 * A method returning theCheatSheet.
+	 * 
 	 * @return the value of theCheatSheet
 	 */
-	public boolean getTheCheatSheet(){
+	public boolean getTheCheatSheet() {
 		return this.theCheatSheet;
 	}
 
-	
 	/**
-	 * A method checking every time if the player has a low energy, or worse, if he can't continue the game.
+	 * A method checking every time if the player has a low energy, or worse, if
+	 * he can't continue the game.
 	 */
 	public void verficationEnergy() {
 		if (this.lvlEnergy == 0) {
@@ -61,7 +67,7 @@ public class Player {
 			System.out.println(Language.ALMOST_DEAD);
 		}
 	}
-	
+
 	/**
 	 * A method lowering the level of energy. The lowest possible level is 0.
 	 *
@@ -204,7 +210,8 @@ public class Player {
 	}
 
 	/**
-	 * A method making the player forget a lecture. Is used when the player plays video games.
+	 * A method making the player forget a lecture. Is used when the player
+	 * plays video games.
 	 */
 	public void forgetOneRandomLecture() {
 		Randomize random = new Randomize();

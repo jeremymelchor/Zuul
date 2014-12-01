@@ -3,6 +3,11 @@ package rooms;
 import main.Language;
 import player.*;
 
+/**
+ * @author Lisa Joanno & Jérémy Melchor
+ * 
+ *         Create the secretariat room with an action associate to it
+ */
 public class Secretariat extends Room {
 	public Secretariat() {
 		super(Language.SECRETARIAT.toString());

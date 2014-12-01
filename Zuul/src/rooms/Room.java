@@ -1,4 +1,5 @@
 package rooms;
+
 import player.*;
 
 import java.util.ArrayList;
@@ -9,14 +10,13 @@ import main.Language;
 import things.Thing;
 
 /**
- * Class Room - a room in an adventure game.
+ * @author Lisa Joanno & Jérémy Melchor
  * 
- * This class is part of the "World of Zuul" application. "World of Zuul" is a
- * very simple, text based adventure game.
+ *         Class Room - a room in an adventure game.
  * 
- * A "Room" represents one location in the scenery of the game. It is connected
- * to other rooms via exits. For each existing exit, the room stores a reference
- * to the neighboring room.
+ *         A "Room" represents one location in the scenery of the game. It is
+ *         connected to other rooms via exits. For each existing exit, the room
+ *         stores a reference to the neighboring room.
  */
 
 public class Room {
@@ -67,7 +67,7 @@ public class Room {
 	 * @return A long description of this room
 	 */
 	public String getLongDescription() {
-		return Language.YOU_ARE +" "+ description + ".\n" + getExitString();
+		return Language.YOU_ARE + " " + description + ".\n" + getExitString();
 	}
 
 	/**
@@ -148,15 +148,15 @@ public class Room {
 	}
 
 	/**
-	 * A method that will be defined in classes needing a confirmation to enter the room.
-	 *    >   library (is it open ?)
-	 *    >   lecture & lab (if it's not OOP, would you like to follow it ?)
+	 * A method that will be defined in classes needing a confirmation to enter
+	 * the room. > library (is it open ?) > lecture & lab (if it's not OOP,
+	 * would you like to follow it ?)
+	 * 
 	 * @return if yes or no, following the question.
 	 */
 	public boolean specialAction(Player player) {
 		/** Nothing */
 		return false;
 	}
-	
-	
+
 }

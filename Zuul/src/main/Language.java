@@ -1,5 +1,11 @@
 package main;
 
+/**
+ * @author Lisa Joanno & Jérémy Melchor
+ * 
+ *         Language.java change the language of the game, in English or in
+ *         French
+ */
 public enum Language {
 	HELLO(""), EXIT(""), HELP(""), NODOOR(""), LIBRARY_CLOSED(""), EXITS_LIST(
 			""), UPTODATE(""), LECTURE(""), LAB(""), ENERGY_LEVEL(""), STATS(""), USELESS_ROOM(
@@ -16,7 +22,8 @@ public enum Language {
 			""), THIS_IS_OOP_LAB(""), YOU_FOLLOW_IT(""), NO_LECTURE_LEFT(""), LAB_UP_TO_DATE(
 			""), WELCOME_QUIZ(""), THERE_WILL_BE(""), MUST_ANSWER(""), CORRECT_ANSWER(
 			""), FALSE_ANSWER(""), CONGRATULATIONS(""), GAME_OVER(""), TRUE_WORD(
-			""), FALSE_WORD(""), POO_BOOK(""), CANT_TAKE_EXAM(""), YOUR_ANSWER(""), CHEAT(""), FOUND_CHEAT(""), DEAD(""), ALMOST_DEAD(""), DESIGNING_CLASSES(
+			""), FALSE_WORD(""), POO_BOOK(""), CANT_TAKE_EXAM(""), YOUR_ANSWER(
+			""), CHEAT(""), FOUND_CHEAT(""), DEAD(""), ALMOST_DEAD(""), DESIGNING_CLASSES(
 			""), INHERITANCE(""), POLYMORPHISM(""), ABSTRACTION(""), INTERFACE(
 			""), ERRORS(""), DEBUG(""), QUESTION_1(""), QUESTION_2(""), QUESTION_3(
 			""), QUESTION_4(""), QUESTION_5("");
@@ -26,15 +33,32 @@ public enum Language {
 		this.str = str;
 	}
 
+	/**
+	 * Method that will set str in the variable str
+	 * 
+	 * @param str
+	 *            String that will be in str
+	 */
 	void setStr(String str) {
 		this.str = str;
 	}
 
+	/**
+	 * Return str
+	 */
 	@Override
 	public String toString() {
 		return str;
 	}
 
+	/**
+	 * Method that will put the different sentences in all the variables,
+	 * according to what the user entered at the begining of the game (FR for
+	 * french and EN for english)
+	 * 
+	 * @param lang
+	 *            FR or EN
+	 */
 	public static void setLanguage(String lang) {
 		String[] whatLanguage;
 		switch (lang) {
