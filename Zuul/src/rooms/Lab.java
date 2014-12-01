@@ -1,8 +1,6 @@
 package rooms;
 
-import main.Language;
-import main.Parser;
-import main.Randomize;
+import main.*;
 import player.*;
 
 /**
@@ -36,6 +34,9 @@ public class Lab extends Room {
 			Parser pa = new Parser();
 			String ans = pa.getCommand();
 			if (ans.equals(Language.YES_WORD.toString())) {
+				try {
+					Game.waiting();
+				} catch (InterruptedException e) { }
 				player.lowEnergy(10);
 				System.out.println(Language.FOLLOW_LAB);
 				return true;
@@ -46,6 +47,9 @@ public class Lab extends Room {
 		} else if (choice == 1) { // we are in an OOP class (we must follow it)
 			System.out.println(Language.THIS_IS_OOP_LAB);
 			if (player.whatLabToAttend() != null) {
+				try {
+					Game.waiting();
+				} catch (InterruptedException e) { }
 				System.out.println(Language.YOU_FOLLOW_IT);
 				player.addLab();
 				player.lowEnergy(10);

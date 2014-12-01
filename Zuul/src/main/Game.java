@@ -26,7 +26,7 @@ public class Game {
 	 *
 	 * @throws InterruptedException
 	 */
-	public void waiting() throws InterruptedException {
+	public static void waiting() throws InterruptedException {
 		System.out.print(".");
 		Thread.sleep(1000);
 		System.out.print(".");
